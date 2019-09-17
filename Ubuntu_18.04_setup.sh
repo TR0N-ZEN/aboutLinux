@@ -1,7 +1,7 @@
 #! /bin/bash
 echo "I will setup your OS with some apps"
-deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 sudo apt-get update
 sudo apt-get upgrade
 sudo snap install --classic code # or code-insiders
