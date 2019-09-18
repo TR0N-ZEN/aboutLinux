@@ -8,6 +8,6 @@ git --version
 git config --global user.name "Theo"
 git config --global user.email "theo.reichert7@gmail.com"
 git config --list
-sudo snap install VLC
+sudo snap install vlc
 sudo snap install spotify
 sudo snap install discord --classic
