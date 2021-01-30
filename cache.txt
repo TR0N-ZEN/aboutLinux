@@ -1,0 +1,23 @@
+//package sources:
+	//main (complies ubuntu licenses),
+	//restricted (high importance but software-license is owned by someone lese than Canonical),
+	//universe (free license software, not offically supported, part of the ubuntu package sources),
+	//multiverse (software under license of others causing restrictions, not offically supported),
+	//partner (commercial, non-opensource, just integrated in sources for convinience like easy updating)
+	//foreign sources (PPA from Launchpad)
+		//sudo add-apt-repository ppa:LAUNCHPAD-NUTZERNAME/PPA-NAME
+		//for installing additional external software from a repository at "Launchpad".
+		//"Launchpad" is a webapplication from the company Canonical (also the creators of ubuntu)
+
+//appearance
+	sudo apt install gnome-tweak-tool
+	//Numix Theme and Icons:
+	sudo add-apt-repository ppa:numix/ppa
+	sudo apt-get update
+	sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+	
+//Firefox Tweaks:
+	about:config
+	layers.acceleration.force-enabled
+	gfx.webrender.all
+

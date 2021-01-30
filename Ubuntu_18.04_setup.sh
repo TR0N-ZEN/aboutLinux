@@ -11,3 +11,15 @@ git config --list
 sudo snap install vlc
 sudo snap install spotify
 sudo snap install discord --classic
+
+//appearance
+sudo apt install gnome-tweak-tool
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+
+//additional
+    //Firefox Tweaks:
+        //about:config
+        //layers.acceleration.force-enabled
+        //gfx.webrender.all
