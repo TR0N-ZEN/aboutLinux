@@ -1,1 +1,0 @@
-systemcrtl {start,stop,restart,reload} <unit>

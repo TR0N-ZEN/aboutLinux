@@ -3,6 +3,7 @@ sources:
 
 ---
 
+## reminder
 ## units
 \<unit\> := {  
 	\<name\>.service |  
@@ -17,34 +18,34 @@ sources:
 	\<name\>.target |  
 	\<name\>.timer  
 }
+## targets
+are stages of the system  
+and each stage has programs which are added to the pool of running programs  
+making the system more complex  
+this concept can be compared to runlevels
 
 
-### commands
-```BASH
-systemctl {start,stop,restart,reload} <unit>
-```
-
-```BASH
-systemctl status <unit>
-```
-
-list loaded services:
-```BASH
-systemctl -t service 
-```
-
-list installed services:
-```BASH
-systemctl list-unit-files -t service 
-```
-
-enable or disable autostart 
-```BASH
-systemctl {enable,disable} <unit> ... <unit>
-```
+`systemctl -t target` will maybe list all targets running
+`systemctl list-unit-files -t targets` lists all installed targets
 
 
-### targets
-are groups of units
-those groups can be ompared to "Runlevels" (what are Runlevels?)
+---
 
+
+## commands
+|effect|command|
+|-|-|
+|start or stop *units*|`systemctl {start,stop,restart,reload} <unit>`|<!-- ```BASH systemctl {start,stop,restart,reload} <unit>``` -->
+|enable or disable autostart of *units* |`systemctl {enable,disable} <unit> ... <unit>`| <!-- ```BASH systemctl {enable,disable} <unit> ... <unit> ``` -->
+|list loaded services| `systemctl -t service`| <!-- ```BASH systemctl -t service ``` -->
+|list loaded *unitfiles* of type `<unitType>` |`systemctl -t <unitType>`<br>is valid if `<unitType>` &isin; {service,socket,device,mount,automount,path,scope,slice,swap,target,timer}.|<!--```BASH systemctl -t <unitType>``` -->
+
+
+## subcommands
+```systemctl <subcommand>```
+|effect|command|
+|-|-|
+|list installed services|```systemctl list-unit-files -t service```|
+|list installed *units* of type `<unitType>`|```systemctl list-unit-files -t <unitType>```|
+|show status of a *unit*|```systemctl status <unit>```|
+|parses _unitfiles_<br>but doesn't change the configuration<br>and behaviour of the running *units*<br>(so effectively checks syntax of parsed unitfiles?)|```systemctl deamon-reaload```|
