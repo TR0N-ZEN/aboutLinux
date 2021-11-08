@@ -10,9 +10,9 @@
 
 |program|effect|
 |-|-|
-|`startx`|starts the x client but shouldnt it also start the server?|
-|`ssh -X \<ipa-ddress>` | forward output of the x client on machine with \<ip-address> to local computer which executed this command|
-|-|-|
-|-|-|
-|-|-|
-|-|-|
+|`startx`				|starts the x client but shouldnt it also start the server?|
+|`ssh -X <ip-address>`	|forward output of the x client on machine with \<ip-address\> to local computer which executed this command|
+|-						|-|
+|-						|-|
+|-						|-|
+|-						|-|
