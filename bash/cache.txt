@@ -1,6 +1,6 @@
 //package sources:
 	//main (complies ubuntu licenses),
-	//restricted (high importance but software-license is owned by someone lese than Canonical),
+	//restricted (high importance but software-license is owned by someone else than Canonical),
 	//universe (free license software, not offically supported, part of the ubuntu package sources),
 	//multiverse (software under license of others causing restrictions, not offically supported),
 	//partner (commercial, non-opensource, just integrated in sources for convinience like easy updating)
