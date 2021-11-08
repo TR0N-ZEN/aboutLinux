@@ -41,7 +41,7 @@ WantedBy=multi-usr.target
 |`WantedBy=multi-usr.target`			|the *target* at which this process described in the _unitfile_ will be loaded|
 |-|-|
 
-## targets  
+## targets
 are stages of the system  
 and each stage has programs which are added to the pool of running programs  
 making the system more complex  
