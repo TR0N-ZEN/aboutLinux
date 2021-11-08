@@ -1,15 +1,16 @@
 ## interaction
 |name|explaination|
 |-|-|
-|cat 		| |
-|echo 		| print file content to the system's stdandard output or to elsewhere using the ">" and possibly other operarors|
-|nano, vim 	| Texteditoren|
-|ssh 		| connect remotely to another pc and login as a user|
+|cat 			| |
+|echo 			| print file content to the system's stdandard output or to elsewhere using the ">" and possibly other operarors|
+|nano, vim 		| Texteditoren|
+|ssh 			| connect remotely to another pc and login as a user|
+|screen, tmux 	| manager for multiple terminals|
 
 ## hardware
 |name|explaination|
 |-|-|
-|lsblk			| list info about block devices|
+|lsblk, blkid	| list info about block devices|
 |fdisk<br>gdisk	| display and manipulate disk partition table|
 |mkfs 			| erstellen von filesystems (de: Dateisystemen), z.B. fat32, NTFS|
 |genfstab 		| genrieren eines partition/filesystem table (de: Partitionstabelle)|
@@ -24,7 +25,7 @@
 |pacman		| arch associated package manager|
 |apt		| a debian associated package manager|
 |dpkg		| debian package manager|
-|loadkeys	| change keyboard layout to de-latin1
+|loadkeys	| change keyboard layout to e.g. de-latin1
 |dhcpcd		| automatic configuration of dhcp network
 |[systemctl](systemd\commands.md)| organiser for services and able to alter the power state of machine
 |chown		| change ownership
