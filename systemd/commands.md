@@ -25,8 +25,9 @@ making the system more complex
 this concept can be compared to runlevels
 
 
-`systemctl -t target` will maybe list all targets running
-`systemctl list-unit-files -t targets` lists all installed targets
+`systemctl -t target` will maybe list all targets running  
+`systemctl list-unit-files -t targets` lists all installed targets  
+`systemctl isolate <target>` puts system into state after \<target\> was reached  
 
 
 ---
@@ -35,17 +36,15 @@ this concept can be compared to runlevels
 ## commands
 |effect|command|
 |-|-|
-|start or stop *units*|`systemctl {start,stop,restart,reload} <unit>`|<!-- ```BASH systemctl {start,stop,restart,reload} <unit>``` -->
-|enable or disable autostart of *units* |`systemctl {enable,disable} <unit> ... <unit>`| <!-- ```BASH systemctl {enable,disable} <unit> ... <unit> ``` -->
-|list loaded services| `systemctl -t service`| <!-- ```BASH systemctl -t service ``` -->
-|list loaded *unitfiles* of type `<unitType>` |`systemctl -t <unitType>`<br>is valid if `<unitType>` &isin; {service,socket,device,mount,automount,path,scope,slice,swap,target,timer}.|<!--```BASH systemctl -t <unitType>``` -->
+|start or stop *units* 									|`systemctl {start,stop,restart,reload} <unit>`|<!-- ```BASH systemctl {start,stop,restart,reload} <unit>``` -->
+|enable or disable autostart of *units* 				|`systemctl {enable,disable} <unit> ... <unit>`| <!-- ```BASH systemctl {enable,disable} <unit> ... <unit> ``` -->
+|list loaded/running *unitfiles* of type `<unitType>` 	|`systemctl -t <unitType>`<br>is valid if `<unitType>` &isin; {service,socket,device,mount,automount,path,scope,slice,swap,target,timer}.|<!--```BASH systemctl -t <unitType>``` -->
 
 
 ## subcommands
 ```systemctl <subcommand>```
 |effect|command|
 |-|-|
-|list installed services|```systemctl list-unit-files -t service```|
-|list installed *units* of type `<unitType>`|```systemctl list-unit-files -t <unitType>```|
-|show status of a *unit*|```systemctl status <unit>```|
+|list installed *units* of type `<unitType>`	|```systemctl list-unit-files -t <unitType>```|
+|show status of a *unit* 						|```systemctl status <unit>```|
 |parses _unitfiles_<br>but doesn't change the configuration<br>and behaviour of the running *units*<br>(so effectively checks syntax of parsed unitfiles?)|```systemctl deamon-reaload```|
