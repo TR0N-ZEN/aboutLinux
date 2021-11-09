@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "I will setup your OS with some apps"
+echo "setup_apt.sh"
 sudo apt-get update
 sudo apt-get upgrade
 
-#packages via apt
+# packages via apt
 sudo apt install git
 git --version
 git config --global user.name "Theo"
@@ -20,14 +20,14 @@ sudo apt install discord -classic
 # sudo snap install spotify
 # sudo snap install discord --classic
 
-# appearance
+## appearance
 sudo apt install gnome-tweak-tool
 sudo add-apt-repository ppa:numix/ppa
 sudo apt-get update
 sudo apt-get install numix-gtk-theme numix-icon-theme-circle
 
-#additional
-    #Firefox Tweaks:
-        #about:config
-        #layers.acceleration.force-enabled
-        #gfx.webrender.all
+## additional
+    # Firefox Tweaks:
+        # about:config
+        # layers.acceleration.force-enabled
+        # gfx.webrender.all
