@@ -36,13 +36,24 @@ WantedBy=multi-usr.target
 ```
 |code|effect|
 |-|-|
-|`After=network-up.target`|loads the *unitfile* containing this code after _network-up.target_|
+|`After=network-up.target`				|loads the *unitfile* containing this code after _network-up.target_|
 |`ExecStart=/usr/local/bin/theosProgram`|execute the program in the given path if this unit is called to start|
-|`WantedBy=multi-usr.target`|the *target* at which this process described in the _unitfile_ will be loaded|
+|`WantedBy=multi-usr.target`			|the *target* at which this process described in the _unitfile_ will be loaded|
 |-|-|
 
-## targets  
+## targets
 are stages of the system  
 and each stage has programs which are added to the pool of running programs  
 making the system more complex  
 this concept can be compared to runlevels
+
+
+### dependencies
+|||
+|-|-|
+|`Wants=<name>.service`		|please acitvate (i.e. start) *service* mentioned in *unitfile* containing this command in parallel with `<name>.service`|
+|`WantedBy=<name>.target`	|please load *unitfile* containing this declaration in parallel with all the other mentioned *units* inside `<name>.target`|
+|`Requires=<name>.target`	|must activate in parallel|
+|`RequiredBy=<name>.target`	|must activate in parallel|
+|`Before=<name>.target`		|must be activated before `<name>.target`|
+|`After=<name>.target`		|must be activated after `<name>.target`|
