@@ -1,16 +1,18 @@
 ## interaction
 |name|explaination|
 |-|-|
-|cat 		| prints content of a file to the stdout|
-|echo 		| print file content to the system's stdandard output or to elsewhere using the ">" and possibly other operarors|
-|nano, vim 	| Texteditoren |
-|ssh 		| connect to another pc and login as a user|
-|sort	 	| sort lines of text alphabetically or numerically|
-|dd 		| copy a file|
-|mv 		| move a file|
-|find 		| finds files and directories in the given path and its subdirectories, e.g.</br>`find /etc -type f -name "*.conf` (returns every file inside /etc with case sensitive wildecard matching);</br>`find /etc -type f -iname "*.conf` (returns every file inside /etc with case unsensitive wildcard matching);</br>`find /home -type d` (returns every directory inside the directory /home);</br>`find /etc -perm 0664`;</br> `find /etc -size +1m`;</br>`find /etc -maxdepth 1`|
-|grep 		| find patterns expressed in strings in files e.g.</br>`grep "password" /home/ego/desktop/*`;</br>`grep -i "password" /home/ego/desktop/*`</br>Flags: -i caseinsensitive; -n return lines in which patterns were found;|
-|tree		| lists directory structure |
+|cat 			| prints content of a file to the stdout|
+|echo 			| print file content to the system's stdandard output or to elsewhere using the ">" and possibly other operarors|
+|nano, vim 		| Texteditoren |
+|ssh 			| connect to another pc and login as a user|
+|sort	 		| sort lines of text alphabetically or numerically|
+|dd 			| copy a file|
+|mv 			| move a file|
+|find 			| finds files and directories in the given path and its subdirectories, e.g.</br>`find /etc -type f -name "*.conf` (returns every file inside /etc with case sensitive wildecard matching);</br>`find /etc -type f -iname "*.conf` (returns every file inside /etc with case unsensitive wildcard matching);</br>`find /home -type d` (returns every directory inside the directory /home);</br>`find /etc -perm 0664`;</br> `find /etc -size +1m`;</br>`find /etc -maxdepth 1`|
+|grep 			| find patterns expressed in strings in files e.g.</br>`grep "password" /home/ego/desktop/*`;</br>`grep -i "password" /home/ego/desktop/*`</br>Flags: -i caseinsensitive; -n return lines in which patterns were found;|
+|tree			| lists directory structure |
+|screen, tmux 	| manager for multiple terminals|
+
 
 ## hardware
 |name|explaination|

@@ -8,14 +8,29 @@ $<unitType> \quad := \quad service|socket|device|mount|automount|path|scope|slic
 $<unit> \quad := \quad <name>.<unitType>$
 
 
-### commands
-|command|effect|
+`systemctl -t target` will maybe list all targets running  
+`systemctl list-unit-files -t targets` lists all installed targets  
+`systemctl isolate <target>` puts system into state after \<target\> was reached  
+
+
+---
+
+
+## subcommands
+```systemctl <subcommand>```
+|effect|command|
 |-|-|
-|`systemctl {start,stop,restart,reload} <unit> ... <unit>`	|starts,stops,restarts,reloads unit(s) `<unit> ... <unit>`|
-|`systemctl status <unit>`									|shows info about status of unit|
-|`systemctl list-unit --state=<state>`						|list loaded units which are in `<state>`|
-|`systemctl -t <unitType>`<br>`systemctl --type=<unitType>`	|list loaded units of `<unitType>` service|
-|`systemctl {enable,disable} <unit> ... <unit>` 			|enable or disable autostart|
+|list installed *units* of type `<unitType>`	|```systemctl list-unit-files -t <unitType>```|
+|show status of a *unit* 						|```systemctl status <unit>```|
+|parses _unitfiles_<br>but doesn't change the configuration<br>and behaviour of the running *units*<br>(so effectively checks syntax of parsed unitfiles?)|```systemctl deamon-reaload```|
+### commands
++ `systemctl`
+	+ `[start|stop|restart|reload] <unit> ... <unit>`
+	+ `[enable|disable] <unit> ... <unit>`
+	+ `status <unit>`
+	+ `list-unit --state=<state>`
+	+ `list-unit-files`
+	+ `-t <unitType>`<br>`--type=<unitType>`
 
 ### targets 
 those groups can be ompared to "Runlevels" (what are Runlevels?)  
