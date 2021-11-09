@@ -6,8 +6,12 @@
 ||||
 ||||
 
+Consider the code written in _./hello.sh_:
 
-|-|-|
-|-|-|
-|-|-|
-|-|-|
+```bash
+#!/bin/bash
+
+echo "What is your Name?"
+read PERSON
+echo "Hello $PERSON."
+```
