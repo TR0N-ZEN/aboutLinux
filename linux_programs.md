@@ -12,6 +12,9 @@
 |grep 			| find patterns expressed in strings in files e.g.</br>`grep "password" /home/ego/desktop/*`;</br>`grep -i "password" /home/ego/desktop/*`</br>Flags: -i caseinsensitive; -n return lines in which patterns were found;|
 |tree			| lists directory structure |
 |screen, tmux 	| manager for multiple terminals|
+|-				| -|
+|-				| -|
+|-				| -|
 
 
 ## hardware
@@ -24,8 +27,9 @@
 |arch 			|returns cpu architecture|
 |lshw			| lists hardware|
 |lspci			| list pci devices|
-|				| |
-|				| |
+|-				| -|
+|-				| -|
+|-				| -|
 
 ## system confiuration
 |name|explaination|
@@ -47,9 +51,9 @@
 |passwd		| changes password of a user|
 |userdel -r | deletes user and it's user folder|
 |su 		| switch user|
-|			| |
-|			| |
-|			| |
+|ip			| -|
+|-			| -|
+|-			| -|
 
 ---
 
@@ -60,6 +64,6 @@ miscelanous
 |-|-|
 |bettercap	| network-sniff,spoof,etc. suite|
 |ddrescue 	| data recovery tool|
-|			| |
-|			| |
-|			| |
+|ftp		| -|
+|telnet, ssh| -|
+|-			| -|
