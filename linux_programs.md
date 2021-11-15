@@ -24,7 +24,7 @@
 |fdisk<br>gdisk	| display and manipulate disk partition table|
 |mkfs 			| erstellen von filesystems (de: Dateisystemen), z.B. fat32, NTFS|
 |genfstab 		| genrieren eines partition/filesystem table (de: Partitionstabelle)|
-|arch 			|returns cpu architecture|
+|arch 			| returns cpu architecture|
 |lshw			| lists hardware|
 |lspci			| list pci devices|
 |-				| -|
@@ -42,7 +42,7 @@
 |dpkg		| debian package manager|
 |loadkeys	| change keyboard layout to de-latin1
 |dhcpcd		| automatic configuration of dhcp network
-|[systemctl](systemd\commands.md)| organiser for services and able to alter the power state of machine
+|[systemctl](programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
 |chown		| change ownership
 |chmod		| change mode - changes read-write-execute access for owner,owner-group-member,stranger e.g.</br>`chmod 421 file1` (owner can read; owner-group-member can write; strangers can execute fle1);</br>`chmod 751 file1` (owner can read,write,execute; owner-group-member can read,execute; strangers can execute fle1);</br>so each digit x,y, in `chmod xyz file1` sets rights, x for the owner, y for the owner-group-member and z for strangers, the value of each digit determines the rights of the according user like so: 4 for read, 2 for write, 1 for execute |
 |useradd	| adds a user (`useradd [OPTIONS] USERNAME`)|
