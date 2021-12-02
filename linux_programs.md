@@ -1,4 +1,3 @@
-
 ## hardware
 |name|explaination|
 |-|-|
@@ -9,7 +8,6 @@
 |arch 			| returns cpu architecture|
 |lshw			| lists hardware |
 |lspci			| list pci devices |
-|ln				| create symbolic links |
 |-				| - |
 
 ## system confiuration
@@ -22,7 +20,7 @@
 |apt		    | a debian associated package manager|
 |dpkg		    | debian package manager|
 |loadkeys	    | change keyboard layout to de-latin1
-|[systemctl]    |(programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
+|[systemctl]    | (programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
 |useradd	    | adds a user (`useradd [OPTIONS] USERNAME`)|
 |id             | display information about current user |
 |usermod	    | modify user (`usermod -aG <group> <user>` - adds \<user> to \<group> in Ubuntu)|
@@ -34,10 +32,12 @@
 |su 		    | switch user|
 |touch          | create a file|
 |ls			    | list files |
+|ln				| create symbolic links |
 |cat 		    | prints content of a file to the stdout|
 |echo 			| print file content to the system's stdandard output or to elsewhere using the ">" and possibly other operarors|
 |nano, vim 		| Texteditoren |
 |mv 			| move a file|
+|cp 			| copy a file|
 |dd 			| copy a file|
 |chown		    | change ownership
 |chmod		    | change mode - changes read-write-execute access for owner,owner-group-member,stranger e.g.</br>`chmod 421 file1` (owner can read; owner-group-member can write; strangers can execute fle1);</br>`chmod 751 file1` (owner can read,write,execute; owner-group-member can read,execute; strangers can execute fle1);</br>so each digit x,y, in `chmod xyz file1` sets rights, x for the owner, y for the owner-group-member and z for strangers, the value of each digit determines the rights of the according user like so: 4 for read, 2 for write, 1 for execute |
@@ -50,6 +50,7 @@
 |sort	 		| sort lines of text alphabetically or numerically|
 |screen, tmux 	| manager for multiple terminals|
 |ip			    | display information about internet protocol  |
+|mount          | make files in a device accesible|
 |ssh 			| connect to another pc and login as a user|
 |-			    | -|
 |-			    | -|
@@ -63,6 +64,11 @@ miscelanous
 |-|-|
 |bettercap	| network-sniff,spoof,etc. suite|
 |ddrescue 	| data recovery tool|
-|ftp		| - |
-|telnet     | - |
+|ftp		| for file transfer |
+|telnet     | ? |
+|tee		| ? sth like passing commands to stdout and a logfile at the same time |
+|wget		| for downloading data |
+|curl		| for downloading data |
+|-			| - |
+|-			| - |
 |-			| - |
