@@ -1,3 +1,11 @@
+Resources:
++ `man systemd`
++ `man systemctl`
++ `man service`
++ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-getting_started#Installing-software
+
+---
+
 *systemd* is a deamon (background process) managing stuff.  
 `systemctl` is a function callable in the shell to change systemd's behaviour.
 
