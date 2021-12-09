@@ -1,0 +1,1 @@
+mount -U EAD49BDCD49BA979 /run/media/tr0n/shared

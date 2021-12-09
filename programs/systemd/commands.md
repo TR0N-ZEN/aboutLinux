@@ -30,7 +30,7 @@ $<unit> \quad := \quad <name>.<unitType>$
 	+ `status <unit>`
 	+ `list-unit --state=<state>`
 	+ `list-unit-files`
-	+ `-t <unitType>`<br>`--type=<unitType>`
+		+ `-t <unitType>`<br>`--type=<unitType>`
 
 ### targets 
 those groups can be ompared to "Runlevels" (what are Runlevels?)  
