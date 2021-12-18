@@ -4,5 +4,5 @@
 | /etc/mtab         | list of currently mounted filesystems |
 | ~/.profile        | shell commands executed directly after login to the user associated with ~ |
 | ~/.bashrc         | settings loaded before start of a terminal |
-|-                  |-|
+| /etc/passwd       |-|
 |-                  |-|
