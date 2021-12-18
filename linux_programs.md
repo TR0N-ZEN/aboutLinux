@@ -2,13 +2,16 @@
 |name|explaination|
 |-|-|
 |lsblk			| list info about block devices|
+|blkid			| block id - lists block devices and their ids |
 |fdisk<br>gdisk	| display and manipulate disk partition table|
 |mkfs 			| erstellen von filesystems (de: Dateisystemen), z.B. fat32, NTFS|
 |genfstab 		| genrieren eines partition/filesystem table (de: Partitionstabelle)|
 |arch 			| returns cpu architecture|
 |lshw			| lists hardware |
 |lspci			| list pci devices |
-|-				| - |
+|				| - |
+|				| - |
+|				| - |
 
 ## system confiuration
 |name           |explaination|
@@ -20,7 +23,7 @@
 |apt		    | a debian associated package manager|
 |dpkg		    | debian package manager|
 |loadkeys	    | change keyboard layout to de-latin1
-|[systemctl]    | (programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
+|[systemctl](.\programs\systemd\info.md)    | (programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
 |useradd	    | adds a user (`useradd [OPTIONS] USERNAME`)|
 |id             | display information about current user |
 |usermod	    | modify user (`usermod -aG <group> <user>` - adds \<user> to \<group> in Ubuntu)|
@@ -52,6 +55,7 @@
 |ip			    | display information about internet protocol  |
 |mount          | make files in a device accesible|
 |ssh 			| connect to another pc and login as a user|
+|-			    | -|
 |-			    | -|
 |-			    | -|
 
