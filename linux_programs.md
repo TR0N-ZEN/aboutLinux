@@ -55,6 +55,9 @@
 |ip			    | display information about internet protocol  |
 |mount          | make files in a device accesible|
 |ssh 			| connect to another pc and login as a user|
+|chsh		    | change the default shell|
+|			    | -|
+|-			    | -|
 |-			    | -|
 |-			    | -|
 |-			    | -|
