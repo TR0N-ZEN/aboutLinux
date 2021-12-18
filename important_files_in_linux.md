@@ -6,7 +6,7 @@
 | ~/.bashrc         			| settings loaded before start of a terminal |
 | /etc/os-release 				| get information about distribution|
 | /etc/apt/sources.list 	| file with addresses to servers for updates|
-|-                  			| |
-|-                  			| |
-|-                  			| |
-|-                  			| |
+| /etc/passwd       			|-|
+|-                  			|-|
+|-                  			|-|
+|-                  			|-|
