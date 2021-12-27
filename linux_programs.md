@@ -2,13 +2,16 @@
 |name|explaination|
 |-|-|
 |lsblk			| list info about block devices|
+|blkid			| block id - lists block devices and their ids |
 |fdisk<br>gdisk	| display and manipulate disk partition table|
 |mkfs 			| erstellen von filesystems (de: Dateisystemen), z.B. fat32, NTFS|
 |genfstab 		| genrieren eines partition/filesystem table (de: Partitionstabelle)|
 |arch 			| returns cpu architecture|
 |lshw			| lists hardware |
 |lspci			| list pci devices |
-|-				| - |
+|				| - |
+|				| - |
+|				| - |
 
 ## system confiuration
 |name           |explaination|
@@ -53,6 +56,7 @@
 |mount          | make files in a device accesible|
 |ssh 			| connect to another pc and login as a user|
 |chsh		    | change the default shell|
+|-			    | -|
 |-			    | -|
 |-			    | -|
 |-			    | -|

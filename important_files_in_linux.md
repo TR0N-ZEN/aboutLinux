@@ -3,6 +3,7 @@
 | /etc/fstab                    | contains filesystem table, partitions entered here allegedly get automatically mounted during the boot process |
 | /etc/mtab                     | list of currently mounted filesystems |
 | /etc/passwd                   |-|
+| /etc/apt/sources.list         |-|
 | /etc/pacman.conf              |-|
 | /etc/pacman.d/mirrorlist      |-|
 |-                              |-|
