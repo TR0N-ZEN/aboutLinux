@@ -20,7 +20,7 @@
 |apt		    | a debian associated package manager|
 |dpkg		    | debian package manager|
 |loadkeys	    | change keyboard layout to de-latin1
-|[systemctl]    | (programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
+|systemctl      | (programs/systemd/commands.md)| organiser for services and able to alter the power state of machine
 |useradd	    | adds a user (`useradd [OPTIONS] USERNAME`)|
 |id             | display information about current user |
 |usermod	    | modify user (`usermod -aG <group> <user>` - adds \<user> to \<group> in Ubuntu)|
@@ -53,7 +53,6 @@
 |mount          | make files in a device accesible|
 |ssh 			| connect to another pc and login as a user|
 |chsh		    | change the default shell|
-|			    | -|
 |-			    | -|
 |-			    | -|
 |-			    | -|
@@ -72,6 +71,7 @@ miscelanous
 |tee		| ? sth like passing commands to stdout and a logfile at the same time |
 |wget		| for downloading data |
 |curl		| for downloading data |
+|history	| for previously entered commands|
 |-			| - |
 |-			| - |
 |-			| - |
