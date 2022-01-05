@@ -10,6 +10,6 @@
 |-                              |-|
 | ~/.profile                    | shell commands executed directly after login to the user associated with ~ |
 | ~/.bashrc                     | settings loaded before start of a terminal |
-|-                              |-|
+| ~/.bash_history               | history of commands entered into the bash shell |
 |-                              |-|
 |-                              |-|

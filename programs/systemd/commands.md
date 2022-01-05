@@ -48,6 +48,25 @@ WantedBy=multi-usr.target
 ## units
 `<unitType>` := `service`|`socket`|`device`|`mount`|`automount`|`path`|`scope`|`slice`|`swap`|`target`|`timer`|`snapshot`    
 `<unit>` := `name`.`unitType`
+`<state>` := `loaded` | `active` | `running` | `failed` | 
+> `<state>` can be of three categories of states:
+> 	+ reflection if unit was probperly loaded LOAD := { `loaded`, `not-found` }
+> 	+ high-level unit activation state ACTIVE := { `active`, `inactive`, `failed` }
+> 	+ low-level unit activation state, value is dependent on the `<unitType>` SUB(`<unitType>`) := { `dead`, ... }
+>		+ SUB(`service`) 	:= { `dead`, `exited`, `exited`, `failed` }
+>		+ SUB(`socket`) 	:= { `dead`, `running`, `listening` }
+>		+ SUB(`device`) 	:= { `plugged`, ... }
+>		+ SUB(`mount`) 		:= { `dead`, `mounted`, ... }
+>		+ SUB(`automount`) 	:= { `dead`, `running`, ... }
+>		+ SUB(`path`) 		:= { `waiting`, ... }
+>		+ SUB(`scope`) 		:= { `running`, `abandon`, ... }
+>		+ SUB(`slice`) 		:= { `dead`, ... }
+>		+ SUB(`swap`) 		:= { `dead`, ... }
+>		+ SUB(`target`) 	:= { `dead`, ... }
+>		+ SUB(`timer`) 		:= { `dead`, ... }
+>		+ SUB(`snapshot`) 	:= { `dead`, ... }
+
+
 
 
 `systemctl -t target` will maybe list all targets running  
@@ -71,7 +90,7 @@ WantedBy=multi-usr.target
 	+ [`start`|`stop`|`restart`|`reload`] `<unit> ... <unit>`
 	+ [`enable`|`disable`] `<unit> ... <unit>`
 	+ `status <unit>`
-	+ `list-unit`
+	+ `list-units`
 		+ `--state=<state>`
 		+ `-t <unitType>` | `--type=<unitType>`
 	+ `list-unit-files`
