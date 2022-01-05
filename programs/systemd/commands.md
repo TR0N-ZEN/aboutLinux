@@ -5,7 +5,7 @@ sources:
 + https://www.freedesktop.org/software/systemd/man/systemctl.html
 + https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-getting_started#Installing-software
 + https://wiki.ubuntuusers.de/systemd/Units/, ...
-+ https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
++ https://www.freedesktop.org/software/systemd/man/systemd.unit.html#; https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
 
 ---
 ## systemd
@@ -144,23 +144,6 @@ and its meaning
 |-										|-|
 </details>
 
-### dependencies
-<details><summary>list for overview</summary>
-
-|														||
-|-													|-|
-|`Wants=<name>.service`			|please acitvate (i.e. start) *service* mentioned in *unitfile* containing this command in parallel with `<name>.service`|
-|`WantedBy=<name>.target`		|please load *unitfile* containing this declaration in parallel with all the other mentioned *units* inside `<name>.target`|
-|`Requires=<name>.target`		|must activate in parallel|
-|`RequiredBy=<name>.target`	|must activate in parallel|
-|`Before=<name>.target`			|must be activated before `<name>.target`|
-|`After=<name>.target`			|must be activated after `<name>.target`|
-|-													|-|
-|-													|-|
-
-
-</details>
-
 ## abstract *unit-file*
 ```
 [Unit]
@@ -173,10 +156,18 @@ Description=<arbitrary>
 WantedBy=<arbitrary>.target
 ```
 
-keys for section
-+ `[Service]`: { `ExecStart`, `ExecStartPr`, `ExecStartPos`, `WorkingDirect`, `User`, `Group`, ... }
-+ `[Timer]` : { `OnBootSec`, `OnUnitActiveSec`, `Unit`, ... }
-+ `[x]` : { `y`, ... }
+a *unit-file* is divided into sections
+
+
+keys for section:
++ `[Unit]`: { `Wants`, (`WantedBy`,) `Requires`, (`RequiredBy`,) `Before`, `After`, ... }
++ `[<unitType>]`
+  + `[Service]`: { `ExecStart`, `ExecStartPr`, `ExecStartPos`, `WorkingDirect`, `User`, `Group`, ... }
+  + `[Timer]` : { `OnBootSec`, `OnUnitActiveSec`, `Unit`, ... }
+  + `[x]` : { `y`, ... }
++ `[Install]` : { `Alias`, `WantedBy`, `RequiredBy`, `Also`, `DefaultInstance` }
+
+> caution the sections `[Unit]` and `[Install]` share some keys
 
 <details><summary>examples</summary>
 
@@ -221,5 +212,22 @@ WantedBy=multi-user.target
 
 
 </details>
+
+</details>
+
+### dependencies
+<details><summary>list for overview</summary>
+
+|														||
+|-													|-|
+|`Wants=<name>.service`			|please acitvate (i.e. start) *service* mentioned in *unitfile* containing this command in parallel with `<name>.service`|
+|`WantedBy=<name>.target`		|please load *unitfile* containing this declaration in parallel with all the other mentioned *units* inside `<name>.target`|
+|`Requires=<name>.target`		|must activate in parallel|
+|`RequiredBy=<name>.target`	|must activate in parallel|
+|`Before=<name>.target`			|must be activated before `<name>.target`|
+|`After=<name>.target`			|must be activated after `<name>.target`|
+|-													|-|
+|-													|-|
+
 
 </details>
