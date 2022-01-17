@@ -92,10 +92,7 @@ WantedBy=multi-usr.target
 	+ [`start`|`stop`|`restart`|`reload`] `<unit> ... <unit>`
 	+ [`enable`|`disable`] `<unit> ... <unit>`
 	+ `status <unit>`
-	+ `list-units`
-		+ `--state=<state>`
-		+ `-t <unitType>` | `--type=<unitType>`
-	+ `list-unit-files`
+	+ `list-units` | `list-unit-files`
 		+ `--state=<state>`
 		+ `-t <unitType>` | `--type=<unitType>`
 	+ `edit`
@@ -122,7 +119,7 @@ WantedBy=multi-usr.target
 ---
 ## content of a *unit-file*
 
-<details><summary>introductive example of a .service unit-file</summary>
+<details><summary>introducive example of a .service unit-file</summary>
 
 ```EDITOR
 [Unit]
