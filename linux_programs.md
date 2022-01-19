@@ -60,6 +60,7 @@
 |tar			| packaging tool|
 |-			    | -|
 |-			    | -|
+|-			    | -|
 
 ---
 
@@ -76,6 +77,6 @@ miscelanous
 |wget		| for downloading data |
 |curl		| for downloading data |
 |history	| for previously entered commands|
-|-			| - |
+|wc			| counting lines,words or characters |
 |-			| - |
 |-			| - |
