@@ -1,5 +1,3 @@
-mount -U EAD49BDCD49BA979 /run/media/tr0n/shared
-
 ### Hintergrundprozesse
 Prozess direkt im Hintergrund starten
 Um einen Prozess im Hintergrund zu starten, hängt man einfach ein & an den Befehl an:
