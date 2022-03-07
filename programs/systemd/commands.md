@@ -5,7 +5,9 @@ sources:
 + https://www.freedesktop.org/software/systemd/man/systemctl.html
 + https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-getting_started#Installing-software
 + https://wiki.ubuntuusers.de/systemd/Units/, ...
-+ https://www.freedesktop.org/software/systemd/man/systemd.unit.html#; https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
++ https://www.freedesktop.org/software/systemd/man/systemd.unit.html#; 
+  + https://www.freedesktop.org/software/systemd/man/systemd.syntax.html#
+  + https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
 
 ---
 ## systemd
@@ -41,6 +43,9 @@ WantedBy=multi-usr.target
 | `ExecStart=/usr/local/bin/theosProgram` | execute the program in the given path if this unit is called to start         |
 | `WantedBy=multi-usr.target`             | the *target* at which this process described in the _unitfile_ will be loaded |
 | -                                       | -                                                                             |
+| -                                       | -                                                                             |
+| -                                       | -                                                                             |
+
 
 </details>
 
