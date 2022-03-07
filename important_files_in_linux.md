@@ -16,7 +16,7 @@
 | ~/.bashrc                | settings loaded before start of a terminal                                                                     |
 | ~/.bash_history          | history of commands entered into the bash shell                                                                |
 | /var/log/wtmp            | record of all logins and logouts                                                                               |
-| -                        | -                                                                                                              |
+| /etc/ssh/sshd_config     | -                                                                                                              |
 | -                        | -                                                                                                              |
 | -                        | -                                                                                                              |
 | -                        | -                                                                                                              |

@@ -26,3 +26,12 @@ he will be prompted for the password for the private key
 ```bash
 ssh <user>@<server>
 ```
+
+On the host in the file `/etc/ssh/sshd_config`  
+change the line `PublicKeyAuthentication no` to `PublicKeyAuthentication yes`  
+And optionally set `PasswordAuthentication yes` to `PasswordAuthentication no`.  
+
+and type the following to initialize the changes in `/etc/ssh/sshd_config`:  
+```bash
+sudo service ssh restart
+```
