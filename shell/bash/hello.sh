@@ -10,14 +10,14 @@ echo "first argument:$1"
 
 for TOKEN in $*
 do
-	echo $TOKEN
+  echo $TOKEN
 done
 
 LIST=(9 8 7 6 5 4 3 2 1)
 
 for TOKEN in $LIST
 do
-	echo $TOKEN
+  echo $TOKEN
 done
 
 echo "${LIST[8]}"

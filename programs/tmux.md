@@ -1,9 +1,12 @@
-source https://wiki.ubuntuusers.de/tmux/
+sources:
++ https://wiki.ubuntuusers.de/tmux/
++ 
 
 ---
 
 Tmux is a terminal splitter allowing you to interact with multiple terminals in parallel.  
-Tmux is organised in sessions, each session has one or more windows and each window has one ore more panes.
+Tmux is organised in sessions, each session has one or more windows and each window has one or more panes.
+One window takes up the entire screen space usedby this tmux instance.
 
 To start a session and connect to its first window with:
 ```

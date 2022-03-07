@@ -5,7 +5,9 @@ sources:
 + https://www.freedesktop.org/software/systemd/man/systemctl.html
 + https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-getting_started#Installing-software
 + https://wiki.ubuntuusers.de/systemd/Units/, ...
-+ https://www.freedesktop.org/software/systemd/man/systemd.unit.html#; https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
++ https://www.freedesktop.org/software/systemd/man/systemd.unit.html#; 
+  + https://www.freedesktop.org/software/systemd/man/systemd.syntax.html#
+  + https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
 
 ---
 ## systemd
@@ -35,12 +37,15 @@ WantedBy=multi-usr.target
 
 <details><summary>explaination</summary>
 
-|code																			| effect|
-|-																				| -|
-|`After=network-up.target`								| loads the *unitfile* containing this code after _network-up.target_|
-|`ExecStart=/usr/local/bin/theosProgram`	| execute the program in the given path if this unit is called to start|
-|`WantedBy=multi-usr.target`							| the *target* at which this process described in the _unitfile_ will be loaded|
-|-																				| -|
+| code                                    | effect                                                                        |
+| --------------------------------------- | ----------------------------------------------------------------------------- |
+| `After=network-up.target`               | loads the *unitfile* containing this code after _network-up.target_           |
+| `ExecStart=/usr/local/bin/theosProgram` | execute the program in the given path if this unit is called to start         |
+| `WantedBy=multi-usr.target`             | the *target* at which this process described in the _unitfile_ will be loaded |
+| -                                       | -                                                                             |
+| -                                       | -                                                                             |
+| -                                       | -                                                                             |
+
 
 </details>
 
@@ -52,21 +57,21 @@ WantedBy=multi-usr.target
 `<unit>` := `name`.`unitType`
 `<state>` := `loaded` | `active` | `running` | `failed` | 
 > `<state>` can be of three categories of states:
-> 	+ LOAD - reflection if unit was properly loaded LOAD := { `loaded`, `not-found` }
-> 	+ ACTIVE - high-level unit activation state ACTIVE := { `active`, `inactive`, `failed` }
-> 	+ SUB - low-level unit activation state, value is dependent on the `<unitType>` SUB(`<unitType>`) := { `dead`, ... }
->		+ SUB(`service`) 	:= { `dead`, `exited`, `exited`, `failed` }
->		+ SUB(`socket`) 	:= { `dead`, `running`, `listening` }
->		+ SUB(`device`) 	:= { `plugged`, ... }
->		+ SUB(`mount`) 		:= { `dead`, `mounted`, ... }
->		+ SUB(`automount`) 	:= { `dead`, `running`, ... }
->		+ SUB(`path`) 		:= { `waiting`, ... }
->		+ SUB(`scope`) 		:= { `running`, `abandon`, ... }
->		+ SUB(`slice`) 		:= { `dead`, ... }
->		+ SUB(`swap`) 		:= { `dead`, ... }
->		+ SUB(`target`) 	:= { `dead`, ... }
->		+ SUB(`timer`) 		:= { `dead`, ... }
->		+ SUB(`snapshot`) 	:= { `dead`, ... }
+>   + LOAD - reflection if unit was properly loaded LOAD := { `loaded`, `not-found` }
+>   + ACTIVE - high-level unit activation state ACTIVE := { `active`, `inactive`, `failed` }
+>   + SUB - low-level unit activation state, value is dependent on the `<unitType>` SUB(`<unitType>`) := { `dead`, ... }
+>    + SUB(`service`)   := { `dead`, `exited`, `exited`, `failed` }
+>    + SUB(`socket`)    := { `dead`, `running`, `listening` }
+>    + SUB(`device`)    := { `plugged`, ... }
+>    + SUB(`mount`)     := { `dead`, `mounted`, ... }
+>    + SUB(`automount`) := { `dead`, `running`, ... }
+>    + SUB(`path`)      := { `waiting`, ... }
+>    + SUB(`scope`)     := { `running`, `abandon`, ... }
+>    + SUB(`slice`)     := { `dead`, ... }
+>    + SUB(`swap`)      := { `dead`, ... }
+>    + SUB(`target`)    := { `dead`, `enabled`, `disabled`, `static`, `indirect`... }
+>    + SUB(`timer`)     := { `dead`, ... }
+>    + SUB(`snapshot`)  := { `dead`, ... }
 
 
 
@@ -81,40 +86,40 @@ WantedBy=multi-usr.target
 
 ## commands
 ```systemctl <command>```
-|effect													|`<command>`			|
-|-															|-						|
-|list installed *units*					|```list-unit-files```	|
-|list loaded *units*						|```list-units```		|
-|show status of a *unit* 				|```status <unit>```	|
-|parses *unit-files*						|```deamon-reaload```	|
+| effect                  | `<command>`           |
+| ----------------------- | --------------------- |
+| list installed *units*  | ```list-unit-files``` |
+| list loaded *units*     | ```list-units```      |
+| show status of a *unit* | ```status <unit>```   |
+| parses *unit-files*     | ```deamon-reaload```  |
 ### commands
 + `systemctl`
-	+ [`start`|`stop`|`restart`|`reload`] `<unit> ... <unit>`
-	+ [`enable`|`disable`] `<unit> ... <unit>`
-	+ `status <unit>`
-	+ `list-units` | `list-unit-files`
-		+ `--state=<state>`
-		+ `-t <unitType>` | `--type=<unitType>`
-	+ `edit`
-	+ [`mask`, `unmask`]
+  + [`start`|`stop`|`restart`|`reload`] `<unit> ... <unit>`
+  + [`enable`|`disable`] `<unit> ... <unit>`
+  + `status <unit>`
+  + `list-units` | `list-unit-files`
+    + `--state=<state>`
+    + `-t <unitType>` | `--type=<unitType>`
+  + `edit`
+  + [`mask`, `unmask`]
 
 
 ## `<unitType>`
 
-|   				|   |
-| - 				| - |
-| services  | programs |
-| socket 		|connection point between two or more programs or processes, if these terms describe different things |
-| devices		| a device file recognized by the kernel |
-| mounted		| a file system mount point |
-| automount	| a file system automount point |
-| path 			| a file or directory in a file system |
-| scope			| an externally created process |
-| slice			| a group of hierarchically organized units that manage system processs |
-| swap			| a swap file or swap device |
-| snapshot	| a saved state of the systemd manager |
-| target 		| is a list of units; if all units of that list are loaded and running, the target is considered achieved  |
-| timer 		| for executing commands at times which are defined inside the .timer unit-file |
+|           |                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| services  | programs                                                                                                |
+| socket    | connection point between two or more programs or processes, if these terms describe different things    |
+| devices   | a device file recognized by the kernel                                                                  |
+| mounted   | a file system mount point                                                                               |
+| automount | a file system automount point                                                                           |
+| path      | a file or directory in a file system                                                                    |
+| scope     | an externally created process                                                                           |
+| slice     | a group of hierarchically organized units that manage system processs                                   |
+| swap      | a swap file or swap device                                                                              |
+| snapshot  | a saved state of the systemd manager                                                                    |
+| target    | is a list of units; if all units of that list are loaded and running, the target is considered achieved |
+| timer     | for executing commands at times which are defined inside the .timer unit-file                           |
 
 ---
 ## content of a *unit-file*
@@ -133,12 +138,12 @@ ExecStart=/usr/local/bin/theosProgram
 WantedBy=multi-usr.target
 ```
 and its meaning
-|code									|effect|
-|-										|-|
-|`After=network-up.target`				|loads the *unitfile* containing this code after _network-up.target_|
-|`ExecStart=/usr/local/bin/theosProgram`|execute the program in the given path if this unit is called to start|
-|`WantedBy=multi-usr.target`			|the *target* at which this process described in the _unitfile_ will be loaded|
-|-										|-|
+| code                                    | effect                                                                        |
+| --------------------------------------- | ----------------------------------------------------------------------------- |
+| `After=network-up.target`               | loads the *unitfile* containing this code after _network-up.target_           |
+| `ExecStart=/usr/local/bin/theosProgram` | execute the program in the given path if this unit is called to start         |
+| `WantedBy=multi-usr.target`             | the *target* at which this process described in the _unitfile_ will be loaded |
+| -                                       | -                                                                             |
 </details>
 
 ## abstract *unit-file*
@@ -215,16 +220,16 @@ WantedBy=multi-user.target
 ### dependencies
 <details><summary>list for overview</summary>
 
-|														||
-|-													|-|
-|`Wants=<name>.service`			|please acitvate (i.e. start) *service* mentioned in *unitfile* containing this command in parallel with `<name>.service`|
-|`WantedBy=<name>.target`		|please load *unitfile* containing this declaration in parallel with all the other mentioned *units* inside `<name>.target`|
-|`Requires=<name>.target`		|must activate in parallel|
-|`RequiredBy=<name>.target`	|must activate in parallel|
-|`Before=<name>.target`			|must be activated before `<name>.target`|
-|`After=<name>.target`			|must be activated after `<name>.target`|
-|-													|-|
-|-													|-|
+|                            |                                                                                                                            |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `Wants=<name>.service`     | please acitvate (i.e. start) *service* mentioned in *unitfile* containing this command in parallel with `<name>.service`   |
+| `WantedBy=<name>.target`   | please load *unitfile* containing this declaration in parallel with all the other mentioned *units* inside `<name>.target` |
+| `Requires=<name>.target`   | must activate in parallel                                                                                                  |
+| `RequiredBy=<name>.target` | must activate in parallel                                                                                                  |
+| `Before=<name>.target`     | must be activated before `<name>.target`                                                                                   |
+| `After=<name>.target`      | must be activated after `<name>.target`                                                                                    |
+| -                          | -                                                                                                                          |
+| -                          | -                                                                                                                          |
 
 
 </details>
