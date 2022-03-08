@@ -1,7 +1,7 @@
 `steamcmd` is an interactive tool  
-as root edit the sudoers file `nano /etc/sudoers`
+as root edit the sudoers file `nano /etc/sudoers`  
 
-to install it use 
+to install it use  
 ```
 mkdir steamcmd
 cd steamcmd

@@ -8,7 +8,8 @@
 | /etc/apt/sources.list.d/ | -                                                                                                              |
 | /etc/pacman.conf         | -                                                                                                              |
 | /etc/pacman.d/mirrorlist | -                                                                                                              |
-| -                        | -                                                                                                              |
+| /etc/ssh/sshd_config     | -                                                                                                              |
+| /etc/sudoers             | -                                                                                                              |
 | -                        | -                                                                                                              |
 | -                        | -                                                                                                              |
 | ~/.profile               | shell commands executed directly after login to the user associated with the current user                      |
@@ -16,7 +17,6 @@
 | ~/.bashrc                | settings loaded before start of a terminal                                                                     |
 | ~/.bash_history          | history of commands entered into the bash shell                                                                |
 | /var/log/wtmp            | record of all logins and logouts                                                                               |
-| /etc/ssh/sshd_config     | -                                                                                                              |
 | -                        | -                                                                                                              |
 | -                        | -                                                                                                              |
 | -                        | -                                                                                                              |

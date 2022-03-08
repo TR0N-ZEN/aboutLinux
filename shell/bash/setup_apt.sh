@@ -8,7 +8,13 @@ sudo apt install git
 git --version
 git config --global user.name "Theo"
 git config --global user.email "theo.reichert7@gmail.com"
-git config --list
+#git config --list
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+#command -v nvm
+nvm install 16.13.0
+sudo apt install npm
 
 sudo apt install code
 sudo apt install vlc spotify 
