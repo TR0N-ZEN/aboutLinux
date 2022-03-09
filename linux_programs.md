@@ -100,7 +100,7 @@
 | -         | -                                                                    |
 | docker    | -                                                                    |
 | netstat   | -                                                                    |
-| -         | -                                                                    |
+| sed       | stream editor                                                        |
 | -         | -                                                                    |
 | -         | -                                                                    |
 | -         | -                                                                    |
