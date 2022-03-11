@@ -1,3 +1,11 @@
+sources:
++ 
++ https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
++ 
+
+---
+
+
 ```bash
 sed [Optionen] [[-e] sed-Skript | -f Skriptdatei] [Textdatei...]
 ```
