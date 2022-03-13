@@ -12,14 +12,17 @@ If queried with `ls` the first symbol in each row represents a fileproperty, whi
 | p      | named pipe                                                                         |
 | s      | socket                                                                             |
 
-In linux running programs are called processes.  
+(In linux) running programs are called processes.  
 The first process is the _init process_.  
 Each process has a/an:
 + pid (process id)
 + ppid (parent process id; except for the _init process_)
 
+A process gets its id from its parent process.
+
 Processes can be:
 + deamons (background processes; on request with `ps -f` in column with heading _TTY_ a question mark should be)
++ 
 
 Processes exchange data through _sockets_.  
 Terms:
@@ -66,7 +69,7 @@ ist die Verwendung von `disown` notwendig:
 /usr/bin/xeyes & disown
 ``` 
 Es empfiehlt sich aber, die vom Prozess erzeugte Ausgabe 
-auf stdout bzw. stderr entweder in eine Logdatei umzuleiten. 
+auf stdout bzw. stderr entweder in eine Logdatei umzuleiten.  
 Dazu verwendet man bspw. `nohup` (wird wie sudo VOR dem eigentlichen Befehl notiert):
 ```bash
 nohup /usr/bin/xeyes > xeyes.log 2>&1 &
