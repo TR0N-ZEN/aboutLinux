@@ -1,5 +1,6 @@
 {
     "debug.showInlineBreakpointCandidates": false,
     "editor.accessibilitySupport": "on",
-    "diffEditor.wordWrap": "off"
+    "diffEditor.wordWrap": "off",
+    "workbench.editor.splitOnDragAndDrop": false
 }

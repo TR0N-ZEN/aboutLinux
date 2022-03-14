@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "setup_apt.sh"
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 
 # packages via apt
 sudo apt install git
@@ -19,6 +18,7 @@ sudo apt install npm
 sudo apt install code
 sudo apt install vlc spotify 
 sudo apt install discord -classic
+sudo apt install posgresql-client
 
 # packages via snap
 # sudo snap install --classic code # or code-insiders

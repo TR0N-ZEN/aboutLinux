@@ -8,16 +8,23 @@ Tmux is a terminal splitter allowing you to interact with multiple terminals in 
 Tmux is organised in sessions, each session has one or more windows and each window has one or more panes.
 One window takes up the entire screen space usedby this tmux instance.
 
-To start a session and connect to its first window with:
+To start a session and connect to its first window with:  
 ```
-tmux new -s <sessionName>
+tmux new-session -s <sessionName>
 ```
+Start a session without switching to the sessions first window:  
+```
+tmux new-session -s <sessionName> -d
+```
+connect to session
 ```
 tmux attach <sessionName>
 ```
+List sessions?
 ```
 tmux ls
 ```
+kill all sessions?
 ```
 tmux kill-server
 ```
@@ -31,3 +38,13 @@ The keys:
 + <kbd>"</kbd> - split current window horizontally
 + <kbd>&</kbd> - terminate current window
 + <kbd>x</kbd> - close current pane
+
+
+Start a new window:
+```
+tmux new-window -t <sessionName> -n <windowName>
+```
+send commands to a window
+```
+tmux send-keys -t <sessionName>:<windowName> "<ommand>" ENTER
+```
