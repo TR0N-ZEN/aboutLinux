@@ -1,5 +1,6 @@
 sources:
 + https://wiki.ubuntuusers.de/tmux/
++ https://leimao.github.io/blog/Tmux-Tutorial/
 + 
 
 ---
@@ -42,7 +43,7 @@ The keys:
 
 Start a new window:
 ```
-tmux new-window -t <sessionName> -n <windowName>
+tmux new-window -t <windowIndex> -n <windowName>
 ```
 send commands to a window
 ```

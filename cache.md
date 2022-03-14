@@ -1,0 +1,1 @@
+https://forum.ubuntuusers.de/topic/programm-benoetigt-libstdc-so/
