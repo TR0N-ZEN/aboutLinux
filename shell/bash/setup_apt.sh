@@ -9,16 +9,17 @@ git config --global user.name "Theo"
 git config --global user.email "theo.reichert7@gmail.com"
 #git config --list
 
+sudo apt install vim
+sudo apt install code
+sudo apt install vlc spotify 
+sudo apt install discord -classic
+sudo apt install posgresql-client
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 #command -v nvm
 nvm install 16.13.0
 sudo apt install npm
-
-sudo apt install code
-sudo apt install vlc spotify 
-sudo apt install discord -classic
-sudo apt install posgresql-client
 
 # packages via snap
 # sudo snap install --classic code # or code-insiders
