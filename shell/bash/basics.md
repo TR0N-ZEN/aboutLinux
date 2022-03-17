@@ -1,59 +1,28 @@
-| operator | meaning                                                      | example                      |
-| -------- | ------------------------------------------------------------ | ---------------------------- |
-| x > y    | write output from program x into file y                      | `cat file1.txt > file2.txt`  |
-| x >> y   | append output from program x to file y                       | `cat file1.txt >> file2.txt` |
-| x < y    | pass content of file y as arguments to program x (i suppose) | `more < file1.txt`           |
-| x \| y   | pass output of prgram x to input of program y                | `cat fil1.txt | more`        |
-|          |                                                              |                              |
-|          |                                                              |                              |
+
+
+
+
+
+
+
+
+
+
+<!-- | operator    | meaning                                                                                                                                                                         | example                                        |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| x > y       | for the time executing program write data streaming from standard output to file y                                                                                              | `cat file1.txt > file2.txt`                    |
+| x 1> y      | for the time executing program write data streaming from standard output to file y                                                                                              | `cat file1.txt 1> file2.txt`                   |
+| x 2> y      | for the time executing program write data streaming from standard error to file y                                                                                               | `cat file1.txt 2> file2.txt`                   |
+| x 1> y 2> z | for the time executing program write data streaming from standard output to file y and data streaming from stdandard error to file z                                            | `cat file1.txt 1> file2.txt 2> file3.txt`      |
+| x 1> y 2>&1 | for the time executing program write data streaming from standard error to file y and data streaming from stdandard error to the same location where standard out is written to | `cat file1.txt > file2.txt 2>&1`               |
+| x >> y      | for the time executing program append data streaming from standard output to file y                                                                                             | `cat file1.txt >> file2.txt`                   |
+| x < y       | pass content of file y as arguments to program x (i suppose)                                                                                                                    | `more < file1.txt`                             |
+| x \| y      | pass output of program x to input of program y                                                                                                                                  | `cat fil1.txt \| more`                         |
+|             |                                                                                                                                                                                 |                                                |
+|             |                                                                                                                                                                                 |                                                |
+|             |                                                                                                                                                                                 |                                                |
+|             |                                                                                                                                                                                 |                                                |
+|             |                                                                                                                                                                                 |                                                |
 
 + https://dev.to/iggredible/what-does-2-1-mean-290
-
-Consider the code written in _./hello.sh_:
-
-```bash
-#!/bin/bash
-echo "What is your Name?"
-read PERSON
-echo "Hello $PERSON."
-```
-
-```bash
-#!/bin/bash
-echo "What is your Name?"
-read PERSON
-readonly PERSON
-echo "Hello $PERSON."
-```
-
-```bash
-echo "What is your Name?"
-read PERSON
-echo "Hello $PERSON."
-unset PERSON
-```
-
-```bash
-echo "running file: $0"
-echo "first argument:$1"
-```
-
-```bash
-echo $*
-echo $@
-```
-
-```bash
-for TOKEN in $*
-do
-  echo $TOKEN
-done
-```
-
-```bash
-
-```
-
-```bash
-
-```
+ -->
