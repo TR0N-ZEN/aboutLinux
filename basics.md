@@ -74,6 +74,7 @@ Dazu verwendet man bspw. `nohup` (wird wie sudo VOR dem eigentlichen Befehl noti
 ```bash
 nohup /usr/bin/xeyes > xeyes.log 2>&1 &
 ``` 
++ https://dev.to/iggredible/what-does-2-1-mean-290
 
 ## Prozess unterbrechen und/oder in den Hintergrund schicken
 Wenn man ein Programm oder einen Prozess in der Shell gestartet hat, 

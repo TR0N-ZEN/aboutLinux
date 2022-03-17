@@ -2,10 +2,12 @@
 | -------- | ------------------------------------------------------------ | ---------------------------- |
 | x > y    | write output from program x into file y                      | `cat file1.txt > file2.txt`  |
 | x >> y   | append output from program x to file y                       | `cat file1.txt >> file2.txt` |
-| x \| y   | pass output of prgram x to input of program y                |                              |
-| x < y    | pass content of pfile y as arguments to program x (i suppose)|                              |
+| x < y    | pass content of file y as arguments to program x (i suppose) | `more < file1.txt`           |
+| x \| y   | pass output of prgram x to input of program y                | `cat fil1.txt | more`        |
 |          |                                                              |                              |
 |          |                                                              |                              |
+
++ https://dev.to/iggredible/what-does-2-1-mean-290
 
 Consider the code written in _./hello.sh_:
 
@@ -44,7 +46,7 @@ echo $@
 ```bash
 for TOKEN in $*
 do
-	echo $TOKEN
+  echo $TOKEN
 done
 ```
 
