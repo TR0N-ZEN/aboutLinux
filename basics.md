@@ -84,11 +84,11 @@ die vom Prozess verwendet werden, zu bearbeiten oder sichern.
 Mit dem Befehl
 ```bash
 fg
-``` 
+```
 läuft der Prozess anschließend wieder (auf der Shell) weiter. 
 Möchte man die Shell dauerhaft freigeben (also während der Prozess weiterläuft), 
 gibt man statt `fg`
 ```bash
 bg
-``` 
+```
 ein, um den Prozess in den Hintergrund zu schicken. Nun kann man die Shell weiter benutzen oder auch schließen, während der Prozess im Hintergrund läuft.
