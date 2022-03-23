@@ -11,18 +11,11 @@ sources:
 ---
 
 `steamcmd` is an interactive tool  
-as root edit the sudoers file `nano /etc/sudoers`  
+<!-- as root edit the sudoers file `nano /etc/sudoers`   -->
 
-to install it use  
-```
-mkdir steamcmd
-cd steamcmd
-curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -xf -
-echo "alias steamcmd='~/steamcmd/steamcmd.sh'" >> ~/.bashrc
-source ~/.bashrc # not sure if necessary or just open new shell
-sudo apt-get install lib32gcc1
-steamcmd
-```
+To install it  
+create a user named steam with `sudo adduser steam`  
+and execute install.sh.
 
 `steamcmd` is used to install games via their _appid_ like so:
 ```
@@ -41,17 +34,13 @@ Search @https://steamdb.info/apps/ for `<app-id>`
 
 + satisfactory
   + install: `steamcmd +force_install_dir ~/SatisfactoryDedicatedServer +login anonymous +app_update 1690800 validate +quit`
-  + server: `~/SatisfactoryDedicatedServer/FactoryServer.sh`  
-  + savegame: `~/.config/Epic/FactoryGame/Saved/SaveGames/server`  
-  +
+  + server: `~/SatisfactoryDedicatedServer/FactoryServer.sh`
+  + savegame: `~/.config/Epic/FactoryGame/Saved/SaveGames/server`
 + garrysmod
   + install: `steamcmd +force_install_dir ~/GarrysModDS +login anonymous +app_update 4020 validate +quit`
   + server: `~/GarrysModDS/srcds_run -console -game garrysmod +gamemode terrortown +sv_setsteamaccount <your token> +host_workshop_collection <collectionID> +maxplayers 12 +map gm_flatgrass`
-    + if server doenst start because `libstdc++.so.6` cannot be found install some packages by entering 
-    ```
-    sudo apt-get install libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5
-    sudo apt-get install lib32z1
-    ```
+    + if server doesn't start because `libstdc++.so.6` cannot be found install some packages by entering  
+      `sudo apt-get install libc6-i386 lib32stdc++6 lib32gcc1 libncurses5 lib32z1`
     + `<collectionID>` 1526838171 for *Blizzards TTT*
     + 
   +

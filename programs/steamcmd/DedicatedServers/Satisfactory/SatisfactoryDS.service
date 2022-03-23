@@ -1,0 +1,20 @@
+[Unit]
+Description=Satisfactory dedicated server
+Wants=network-online.target
+After=syslog.target network.target nss-lookup.target network-online.target
+
+[Service]
+Environment="LD_LIBRARY_PATH=./linux64"
+#ExecStartPre=steamcmd +force_install_dir "/home/steam/SatisfactoryDedicatedServer" +login anonymous +app_update 1690800 validate +quit
+ExecStart=/home/steam/SatisfactoryDedicatedServer/FactoryServer.sh
+User=steam
+Group=steam
+StandardOutput=journal
+#Restart=on-failure
+WorkingDirectory=/home/steam/SatisfactoryDedicatedServer/FactoryServer.sh
+StandardOutput=append:/var/log/satisfactory.log
+StandardError=append:/var/log/satisfactory.err
+#RemainAfterExit=True
+
+[Install]
+WantedBy=multi-user.target

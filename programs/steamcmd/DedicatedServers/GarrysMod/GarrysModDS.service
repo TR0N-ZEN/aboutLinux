@@ -1,0 +1,10 @@
+[Unit]
+Description=Trouble in Terrorist Town server
+
+[Service]
+#Type=forking #causes everything to fail when uncommented cause ExecStart times out because start.sh doesnt terminate as long as server runs
+ExecStart=/home/steam/Steam/steamapps/common/GarrysModDS/start.sh
+#RemainAfterExit=True
+
+[Install]
+WantedBy=multi-user.target
