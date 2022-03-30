@@ -70,11 +70,17 @@ ist die Verwendung von `disown` notwendig:
 ``` 
 Es empfiehlt sich aber, die vom Prozess erzeugte Ausgabe 
 auf stdout bzw. stderr entweder in eine Logdatei umzuleiten.  
-Dazu verwendet man bspw. `nohup` (wird wie sudo VOR dem eigentlichen Befehl notiert):
+Dazu verwendet man bspw. `nohup` (wird wie `sudo` VOR dem eigentlichen Befehl notiert):
 ```bash
 nohup /usr/bin/xeyes > xeyes.log 2>&1 &
 ``` 
 + https://dev.to/iggredible/what-does-2-1-mean-290
+
+Pocesses streams standard-out and standard-error are in a pseude filesystem facilitated under /etc/proc/.
+The processes streams are 
++ `/proc/<processID>/fd/0` for standard-in
++ `/proc/<processID>/fd/1` for standard-out
++ `/proc/<processID>/fd/2` for standard-error
 
 ## Prozess unterbrechen und/oder in den Hintergrund schicken
 Wenn man ein Programm oder einen Prozess in der Shell gestartet hat, 
@@ -91,4 +97,6 @@ gibt man statt `fg`
 ```bash
 bg
 ```
-ein, um den Prozess in den Hintergrund zu schicken. Nun kann man die Shell weiter benutzen oder auch schließen, während der Prozess im Hintergrund läuft.
+ein, um den Prozess in den Hintergrund zu schicken.  
+Nun kann man die Shell weiter benutzen oder auch schließen, während der Prozess im Hintergrund läuft.
+

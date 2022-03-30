@@ -11,6 +11,7 @@
 | /etc/ssh/sshd_config     | -                                                                                                              |
 | /etc/sudoers             | -                                                                                                              |
 | -                        | -                                                                                                              |
+| /proc/                   | folder with filedescriptors for each process                                                                   |
 | -                        | -                                                                                                              |
 | ~/.profile               | shell commands executed directly after login to the user associated with the current user                      |
 | ~/.bash_profile          | shell commands executed directly after login to the user associated with the current user                      |
