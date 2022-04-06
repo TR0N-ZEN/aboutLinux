@@ -43,7 +43,7 @@ The keys:
 
 Start a new window:
 ```
-tmux new-window -t <windowIndex> -n <windowName>
+tmux new-window -t <sessionIndex> -n <windowName>
 ```
 send commands to a window
 ```
