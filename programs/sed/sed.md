@@ -17,6 +17,16 @@ echo "Anton Knecht" | sed s/Anton/Berta/g #replace Anton with Berta
 cat textfile.txt | sed -n 1,5p # print lines 1 to 5
 ```
 
+If on tries to match a string via a pattern to then certain characters need to be escaped to get their literal meaning.  
+Those characters are called special characters  
+and these are
++ .
++ \*
++ [
++ ]
+and possibly more
+
+
 ```bash
 
 ```
