@@ -104,6 +104,7 @@
 | netstat   | display network connections                                          |
 | sed       | stream editor                                                        |
 | df        | lists diskspace                                                      |
+| du        | lists filesize                                                       |
 | vim       | text editor  (https://www.keycdn.com/blog/vim-commands)              |
 | kill      | kill processes by process id                                         |
 | apk       | package manager for linux distribution alpine                        |
