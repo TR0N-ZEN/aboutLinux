@@ -10,7 +10,15 @@ git config --global user.name "Theo"
 git config --global user.email "theo.reichert7@gmail.com"
 #git config --list
 
-sudo apt install vim jq htop man info curl posgresql-client
+sudo apt install vim jq htop man info curl posgresql-client wget
+#sudo apt install code
+sudo apt-get install wget gpg
+wget -qO- 'https://packages.microsoft.com/keys/microsoft.asc' | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https
+sudo apt update
 sudo apt install code
 sudo apt install vlc spotify 
 #sudo apt install discord -classic
@@ -28,6 +36,14 @@ sudo mkdir tmp
       sudo apt-get -f install && sudo dpkg -i steamInstaller.deb
     cd ../
   sudo rm -r ./steam/
+  # printer
+  # https://www.canon.de/support/consumer_products/products/fax__multifunctionals/inkjet/pixma_tr_series/pixma-tr4550.html?type=drivers&language=de&os=linux%20(64-bit)
+  sudo mkdir ./printer/
+    cd ./printer/ && \
+      curl 'https://gdlp01.c-wss.com/gds/8/0100009928/01/cnijfilter2-5.70-1-deb.tar.gz' -o - -s | tar xz - && . './cnijfilter2-5.70-1-deb/install.sh' && sudo rm -r './cnijfilter2-5.70-1-deb'
+      curl 'https://gdlp01.c-wss.com/gds/1/0100009931/01/scangearmp2-3.70-1-deb.tar.gz' -o - -s | tar xz - && . './scangearmp2-3.70-1-deb/install.sh' && sudo rm -r './scangearmp2-3.70-1-deb'
+    cd ../
+  sudo rm -r ./printer/
 cd ../ && sudo rm -r ./tmp/
 
 
@@ -36,6 +52,8 @@ source ~/.bashrc
 #command -v nvm
 nvm install 16.13.0
 #sudo apt install npm # npm is installed with node which installed via nvm
+
+
 
 # packages via snap
 # sudo snap install --classic code # or code-insiders
