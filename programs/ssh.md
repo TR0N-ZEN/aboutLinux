@@ -4,7 +4,8 @@ The public key is send to the hosts where the client wants to login.
 Creating a rsa key of 4096 bits length on local computer
 you will be prompted for a password to protect the private key from being used by someone else
 ```bash
-ssh-keygen -t rsa -b 4096
+ssh-keygen -t rsa -b 4096 # or
+ssh-keygen -t ed25519 -a 420 -f ~/.ssh/purpose -C 'ranodm comment'
 ```
 
 Copy public key of client to server (via program "ssh-copy-id", that might not be available on windows machines)
