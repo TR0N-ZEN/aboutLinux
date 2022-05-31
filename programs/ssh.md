@@ -36,11 +36,11 @@ ssh <user>@<server>
 
 You can preconfigure used keys for different uris in the file `~/.ssh/config`
 ```cmd
-Host Github #arbitrary descriptive name
-  HostName github.com #host uri
+Host Github github.com GH #used for matching the server url
+  HostName github.com #host uri that is actually used
   User git
   PreferredAuthentications publickey
-  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/github.ed25519
 ```
 
 Enable other programs using ssh idendties by adding private keys to the key-chain as it is called in ubuntu for example by commanding:
