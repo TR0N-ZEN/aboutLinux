@@ -16,7 +16,7 @@ resource:
 ### building
 + _Makefile_ is a script for compiling and building the executables and more
     + `make` compile and build
-    + `make install` predefined directories
+    + `make install` predefined directories (what the heck does that mean?)
     + `make clean` remove stale object (`.o`) files
     + `make -n` preview commands for the build process
 + _Imakefile_ is for more complex software
