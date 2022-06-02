@@ -45,6 +45,7 @@ Processes can create child processes and communicate with them.
 Each process next to other things, has a:
 + pid (process id)
 + ppid (parent process id; except for the _init process_)
++ list of things each pointing to child processes, each thin also contains a jobid, numbering the child processes starting from 1
 The first process and so the parent process of all other processes is called the _init process_.  
 
 A process gets its id from its parent process.  
@@ -99,9 +100,9 @@ Processes attached to a shell can be detached from it by
 first suspending them via pressing <kbd>Strg</kbd> <kbd>Z</kbd>, making the shell more accessible for interaction with the user  
 and then seding it to the background with the command  
 ```bash
-bg [<pid>|<jobid>]
+bg [<pid>|%<jobid>]
 ```
 To bring at attach it to the shell again (also to reffered as brining it into the foreground)
 ```bash
-fg [<pid>|<jobid>]
+fg [<pid>|%<jobid>]
 ```
