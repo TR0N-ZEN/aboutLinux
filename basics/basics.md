@@ -103,5 +103,5 @@ bg [<pid>|<jobid>]
 ```
 To bring at attach it to the shell again (also to reffered as brining it into the foreground)
 ```bash
-fg
+fg [<pid>|<jobid>]
 ```
