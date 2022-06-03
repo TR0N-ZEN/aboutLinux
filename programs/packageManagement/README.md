@@ -7,3 +7,6 @@ So if one wants to install a package with a package manager,
 one needs to add sources from where packages can be downloaded,  
 these sources are called repositories.  
 
+Packages are specific to package managers,  
+there is a program called `alien` to translate pacakges between `.deb` and `.rpm` for example.  
+
