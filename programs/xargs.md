@@ -7,4 +7,11 @@ the option `-print0` of `find` format the outputted result as a null seperated l
 and `-0` of `xargs` makes it read its input as a null seperated list.  
 
 ---
+
 + https://medium.com/techtofreedom/5-handy-uses-of-xargs-commands-in-bash-e1574ae06a11
+
+---
+
+examples:  
+`sudo docker container ls --all --format '{{ json . }}' | jq '.ID' | xargs sudo docker container rm`  
+`sudo docker image ls --all --format '{{json . }}' | jq '.ID' | xargs sudo docker image rm`
