@@ -1,14 +1,18 @@
 #!/bin/bash
 
-while []; do
+while [  ]; do
   
 done
 
 # or
 
-while []
+while [  ]
 do
   
 done
 
 # why there are to options, read it in if_else.sh
+
+# other bool expressions after while
+while [  ] && [  ]
+while [  ] || [  ]

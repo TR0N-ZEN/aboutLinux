@@ -1,9 +1,13 @@
 #!/bin/bash
 
 # break
-# continue
-# continue n
+#   breaks out of the loop
 
+# continue
+#   skips the rest of the current iteration of the enclosing loop
+
+# continue n
+#   continues with the n-th oteration of the enclosing loop
 a=0
 
 while [ $a -lt 10 ]
