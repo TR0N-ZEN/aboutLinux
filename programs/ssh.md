@@ -35,12 +35,12 @@ ssh <user>@<server>
 ```
 
 You can preconfigure used keys for different uris in the file `~/.ssh/config`
-```cmd
-Host Github #arbitrary descriptive name
-  HostName github.com #host uri
+```bash
+Host Github github.com GH #used for matching the server url
+  HostName github.com #host uri that is actually used
   User git
   PreferredAuthentications publickey
-  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/github.ed25519
 ```
 
 Enable other programs using ssh idendties by adding private keys to the key-chain as it is called in ubuntu for example by commanding:
@@ -51,7 +51,10 @@ Enable other programs using ssh idendties by adding private keys to the key-chai
 
 On the host in the file `/etc/ssh/sshd_config`  
 change the line `PublicKeyAuthentication no` to `PublicKeyAuthentication yes`  
-And optionally set `PasswordAuthentication yes` to `PasswordAuthentication no`.  
+And optionally set  
+`PasswordAuthentication yes` to `PasswordAuthentication no`,  
+`ChallengeresponseAuthentication yes` to `ChallengeresponseAuthentication no`,  
+`UsePAM yes` to `UsePAM no`.
 
 and type the following to initialize the changes in `/etc/ssh/sshd_config`:  
 ```bash
