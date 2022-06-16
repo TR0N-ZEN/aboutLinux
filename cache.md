@@ -10,6 +10,9 @@
 
 
 ```
+ll -tm1 | head -n 6 | xargs rm -r --
+
+docker restart `docker container ls --all | grep "24 minutes" | cut -d' ' -f1`
 ```
 
 ```
