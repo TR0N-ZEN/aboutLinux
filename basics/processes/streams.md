@@ -1,4 +1,4 @@
-Pocesses have an input, output and error stream called standard-in, standard-out and standard-error.  
+Processes have an input, output and error stream called standard-in, standard-out and standard-error.  
 Those are facillitated in a pseude filesystem at */etc/proc/*.
 The processes streams take the appearance of files:  
 + `/proc/<processID>/fd/0` for standard-in
@@ -9,7 +9,6 @@ Are these streams for inter process communication?
 
 ...
 
-When interacting with a computer as a human so called *shells* also known as *command line interfaces* are used.  
 The streams of a process can be attached to a shell, to make the output of a process visible and to enter input for the process.  
 
 To redirect the streams into files which can be read at any point in time.  
