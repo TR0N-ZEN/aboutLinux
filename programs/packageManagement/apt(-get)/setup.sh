@@ -8,6 +8,7 @@ sudo apt install git
 git --version
 git config --global user.name "Theo"
 git config --global user.email "theo.reichert7@gmail.com"
+$ git config --global core.autocrlf true
 #git config --list
 
 sudo apt install vim jq htop man info curl posgresql-client wget
