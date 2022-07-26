@@ -8,7 +8,7 @@ sudo apt install git
 git --version
 git config --global user.name "Theo"
 git config --global user.email "theo.reichert7@gmail.com"
-$ git config --global core.autocrlf true
+git config --global core.autocrlf true
 #git config --list
 
 sudo apt install vim jq htop man info curl posgresql-client wget
@@ -47,13 +47,12 @@ sudo mkdir tmp
   sudo rm -r ./printer/
 cd ../ && sudo rm -r ./tmp/
 
-
-curl -o - https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-source ~/.bashrc
-#command -v nvm
-nvm install 16.13.0
-#sudo apt install npm # npm is installed with node which installed via nvm
-
+export NVS_HOME="$HOME/.nvs"
+git clone https://github.com/jasongin/nvs "$NVS_HOME"
+. "$NVS_HOME/nvs.sh" install
+nvs add lts
+nvs use lts
+nvs link lts
 
 
 # packages via snap
