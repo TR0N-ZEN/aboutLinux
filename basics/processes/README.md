@@ -74,3 +74,5 @@ To stop processes use `kill [<pid>|%<jobid>]`.
 `killall` kills by name.  
 
 
+`echo $$` will print the pid of the shell process.  
+

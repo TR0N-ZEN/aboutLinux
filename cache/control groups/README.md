@@ -58,7 +58,12 @@ ls -l /my_cgroup/cpu/user1/
 ```
 In this case, I am dealing with the file `cpu.shares`, which is found in a path prefixed with `/mygroups/cpu/`.  
 
+Each controller contains a file named `cgroup.procs` containing the process ids of processes belonging to this group.  
+Processes can be move to a cgroup with `echo <pid> > /sys/fs/cgroup/cpu/cg1/cgroup.procs`.  
+
+
 ---
 
 resources:  
 + https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-relationships_between_subsystems_hierarchies_control_groups_and_tasks
++ https://man7.org/linux/man-pages/man7/cgroups.7.html
