@@ -1,17 +1,10 @@
 #!/bin/bash
 
-
-count ()
-{
-  return $#
-}
-
-
 # how to supply two arrays to a functions
 # idea array is prefaced by an integer which indicates it's size
 # f 3 a b c 3 x y z
 
-seperate_two_arrays () #
+seperate_at_index () #
 {
   inp=("$@")
   terminator=$1 # indicates the index inside $inp of the last element of the first array
@@ -37,6 +30,6 @@ seperate_two_arrays () #
 
 
 A=(4 a b c d u u u u u)
-seperate_two_arrays ${A[@]}
+seperate_at_index ${A[@]}
 
 #echo "A has $? elements."
