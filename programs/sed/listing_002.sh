@@ -1,15 +1,12 @@
 #!/bin/bash
 
-#PROJECT=''
-
 function determine
 {
-  PROJECT="`echo $1 | sed -n -e '
-    s/.*\(01099\).*/Dresden/
-    s/.*\(Toten Hosen\).*/Westen/
-    s/.*\(Rammstein\).*/Ost-Berlin/
-    p
-  '`"
+  PROJECT=`echo $1 | sed -n \
+  -e 's/.*\(01099\).*/Dresden/' \
+  -e 's/.*\(Toten Hosen\).*/Westen/' \
+  -e 's/.*\(Rammstein\).*/Ost-Berlin/' \
+  -e 'p'`
   return 0
 }
 
