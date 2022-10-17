@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <item id="index.php">
+        <label>SÜÜÜÜÜ</label>
+        <value>HAH</value>
+        <description>sching-schong</description>
+   </item>
+   <item id="config.php">
+        <label>YKES</label>
+        <value>VALUE2</value>
+        <description>DESCRIPTION</description>
+   </item>
+
+</resources>
