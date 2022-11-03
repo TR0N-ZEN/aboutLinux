@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+COPY videos.tar /tmp/
+RUN echo 'Done copying'
+
+CMD tar -xf /tmp/videos.tar
