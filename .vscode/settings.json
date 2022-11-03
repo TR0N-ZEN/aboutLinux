@@ -3,5 +3,13 @@
     "editor.accessibilitySupport": "on",
     "diffEditor.wordWrap": "off",
     "workbench.editor.splitOnDragAndDrop": false,
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "editor.wrappingIndent": "none",
+    "debug.console.wordWrap": false,
+    "[markdown]": {
+        "editor.wrappingStrategy": "advanced",
+        "editor.wordWrapColumn": 1000,
+        "editor.wordWrap": "off",
+        "diffEditor.wordWrap": "off"
+    }
 }
