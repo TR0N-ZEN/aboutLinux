@@ -2,5 +2,6 @@
     "debug.showInlineBreakpointCandidates": false,
     "editor.accessibilitySupport": "on",
     "diffEditor.wordWrap": "off",
-    "workbench.editor.splitOnDragAndDrop": false
+    "workbench.editor.splitOnDragAndDrop": false,
+    "files.eol": "\n"
 }
