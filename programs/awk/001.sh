@@ -28,3 +28,18 @@ awk -F "/" '/^\// {print $NF}' /etc/shells
 # after processing all lines awk enters into a new line and prints ending now
 echo '\n\n' | awk 'BEGIN{printf "LOL\n"} // {printf "HAH\n"} END {print "\nending now"}'
 
+# print lines from /etc/shells that are longer than 7 signs
+awk 'length($0) > 7' /etc/shells
+
+
+# print lines of output of ps -ef where the last field is equal to "/bin/bash"
+ps -ef | awk '{ if($NF == "/bin/bash") print $0 }'
+
+# prints the text with the values 1, 4, 9, ..., 100
+awk 'BEGIN { for(i=1; i<=10; i++) print "LOL i squared is ", i*i; }'
+
+# print lines inside the file .bashrc
+# where the first field matches the regex /^[b,c]/
+# meaning the first character of the line is either b or c
+awk '$1 ~ /^[b,c]/ {print $0}' .bashrc
+

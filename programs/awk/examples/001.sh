@@ -22,4 +22,4 @@ docker image ls --filter=reference=*:latest --format '{{.Size}}' | sed -ne 's/GB
 
 # can be expressed without sed
 
-docker image ls --filter=reference=*:latest --format '{{.Size}}' | awk '/GB//{ SUM += $1; } END {print SUM }'
+docker image ls --filter=reference=*:latest --format '{{.Size}}' | awk '/GB/ { SUM += $1; } END {print SUM }'
