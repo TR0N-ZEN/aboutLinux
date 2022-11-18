@@ -1,4 +1,6 @@
-### commands
+# systemctl
+
+## commands
 
 + `systemctl`
   + [`start`|`stop`|`restart`|`reload`] `<unit> ... <unit>`
@@ -11,8 +13,6 @@
   + [`mask`, `unmask`] `<unit>`
   + `isolate <target>`
   + `set-property <unit> <key>=<property>`
-  + 
-
 
 ---
 
@@ -32,5 +32,4 @@
 |                                            |                                     |
 |                                            |                                     |
 
-
-systemctl set-property md5sum.service CPUShares=1024
+`systemctl set-property md5sum.service CPUShares=1024`

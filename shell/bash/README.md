@@ -1,8 +1,9 @@
+# bash
 
 sources:
-+ https://dev.to/iggredible/what-does-2-1-mean-290
 
-
++ <https://dev.to/iggredible/what-does-2-1-mean-290>
++ <https://www.howtogeek.com/439199/15-special-characters-you-need-to-know-for-bash/>
 
 | operator      | meaning                                                                                                                                                                         | example                                        |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
@@ -19,4 +20,3 @@ sources:
 |               |                                                                                                                                                                                 |                                                |
 |               |                                                                                                                                                                                 |                                                |
 |               |                                                                                                                                                                                 |                                                |
-
