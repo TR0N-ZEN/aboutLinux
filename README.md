@@ -2,7 +2,7 @@
 
 ## Highest rated sources
 
-+ <https://tldp.org/LDP/abs/html/opprecedence.html>
++ <https://tldp.org/guides.html>
 
 ---
 
