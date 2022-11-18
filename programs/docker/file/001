@@ -1,5 +1,14 @@
+# base image which is provided by docker hub
 FROM ubuntu:latest
+
+# copy the file videos.tar from the build context to the inside of the container in /tmp/
 COPY videos.tar /tmp/
+
+# execute the code following after RUN inside 
+# the container that was started from 
+# the image that was created by running all the statements above this
 RUN echo 'Done copying'
 
+
+# when a container is started from this image execute the code following after CMD 
 CMD tar -xf /tmp/videos.tar
