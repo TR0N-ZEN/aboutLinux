@@ -2,7 +2,7 @@
 
 <details><summary>.service</summary>
 
-```
+```bash
 [Unit]
 Description=Something
 After=network-up.target
@@ -14,7 +14,7 @@ ExecStart=/usr/local/bin/theosProgram
 WantedBy=multi-usr.target
 ```
 
-```
+```bash
 [Unit]
 Description=My Shell Script
 
@@ -25,7 +25,7 @@ ExecStart=/usr/bin/script.sh
 WantedBy=multi-user.target
 ```
 
-```
+```bash
 [Unit]
 Description=My Shell Script
 
@@ -39,7 +39,7 @@ CPUShares=256
 WantedBy=multi-user.target
 ```
 
-```
+```bash
 [Unit]
 Description=My Shell Script2
 
@@ -57,24 +57,28 @@ WantedBy=multi-user.target
 
 drop in files for `cat.service` are in the folder `/etc/systemd/system/cat.service.d/`, the files are name like `[0-9][0-9]-<arbitrary>.conf`
 those files can contain everything under the `[<unitType>]` section, like:
-```
+
+```bash
 [Service]
 Slice=AWESOME.slice
 MemoryAccounting=yes
 CPUAccounting=yes
 ```
-or 
-```
+
+or
+
+```bash
 [Service]
 CPUShares=256
 ```
+
 or change settings really fast via systemctl `systemctl set-property <unitname>.service CPUShares=1024` (don't kow if this is permanent and will be enterd in the unit file)
 
 </details>
 
 <details><summary>.timer</summary>
 
-```
+```bash
 [Unit]
 Description=<arbitrary>
 
@@ -87,7 +91,7 @@ Unit=<arbitrary>.service
 WantedBy=<arbitrary>.target
 ```
 
-```
+```bash
 [Unit]
 # Auto-generated, DO NOT EDIT
 Description=Timer renew for snap application certbot.renew
@@ -108,11 +112,9 @@ WantedBy=timers.target
 
 <details><summary>x</summary>
 
-
 </details>
 
 <details><summary>x</summary>
-
 
 </details>
 

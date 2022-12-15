@@ -1,3 +1,5 @@
+# xargs
+
 Is used  if programs only work on arguments and not with standard input.  
 `rm` is such a program, so `ls -N . | rm` or even `ls -N . | rm -` won't work,  
 but `ls -N . | xargs rm` would.  

@@ -1,4 +1,7 @@
+# README
+
 ## hardware
+
 | name           | explaination                                                       |
 | -------------- | ------------------------------------------------------------------ |
 | lsblk          | list info about block devices                                      |
@@ -14,6 +17,7 @@
 |                | -                                                                  |
 
 ## system confiuration
+
 | name         | explaination                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | chroot       | change the root - wechselt die root, den Wurzelpunkt des Speichers, um so einfacher Systemänderungen vorzunehmen                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -78,11 +82,10 @@
 |              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-
 ---
 
-
 ## miscelanous
+
 ---
 | name      | explaination                                                         |
 | --------- | -------------------------------------------------------------------- |
@@ -105,7 +108,7 @@
 | sed       | stream editor                                                        |
 | df        | lists diskspace                                                      |
 | du        | lists filesize                                                       |
-| vim       | text editor  (https://www.keycdn.com/blog/vim-commands)              |
+| vim       | text editor  <https://www.keycdn.com/blog/vim-commands>              |
 | kill      | kill processes by process id                                         |
 | apk       | package manager for linux distribution alpine                        |
 | make      | -                                                                    |

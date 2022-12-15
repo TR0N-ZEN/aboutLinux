@@ -1,5 +1,7 @@
-### `<state>`
+# `<state>`
+
 can be of three categories of states:
+
 + LOAD - reflection if unit was properly loaded LOAD := { `loaded`, `not-found` }
 + ACTIVE - high-level unit activation state ACTIVE := { `active`, `inactive`, `failed` }
 + SUB - low-level unit activation state, value is dependent on the `<unitType>` SUB(`<unitType>`) := { `dead`, ... }

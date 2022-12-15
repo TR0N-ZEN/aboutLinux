@@ -6,5 +6,5 @@ echo LOL
 !!
 
 # replaces occurence of LOL in last command with FEF and executes that newly crafted commands
-!!:s/LOL/FEF/;
+!!:s/LOL/FEF/
 

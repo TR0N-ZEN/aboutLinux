@@ -1,3 +1,4 @@
+# base image which is provided by docker hub
 FROM ubuntu:latest
 
 # copy README.md form the build context to the containers path /tmp/
