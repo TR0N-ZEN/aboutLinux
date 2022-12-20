@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo rm -rf /usr/local/go && \
 curl -L 'https://go.dev/dl/go1.19.1.linux-amd64.tar.gz' \
   | sudo tar -C /usr/local -xzf -
