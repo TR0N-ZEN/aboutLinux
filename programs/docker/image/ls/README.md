@@ -1,5 +1,4 @@
 sources:
-  + https://docs.docker.com/engine/reference/commandline/
   + https://docs.docker.com/engine/reference/commandline/images/#filtering
   + https://docs.docker.com/engine/reference/commandline/images/#format-the-output
 

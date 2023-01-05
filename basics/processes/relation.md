@@ -5,7 +5,7 @@ Terms:
 
 Since processes can start other processes,  
 the child processes can block the execution of the parent process or not.  
-This is amatter if a process is started in foreground or in background.  
+This is of matter if a process is started in foreground or in background.  
 
 To start a process detached from the bash shell, appending a space and `&` to the command one enters will do:  
 ```bash
@@ -29,9 +29,9 @@ To bring at attach it to the shell again (also to reffered as brining it into th
 fg [<pid>|%<jobid>]
 ```
 
-The comman `jobs` shows the child processes of the present shell session.  
+The command `jobs` shows the child processes of the present shell session.  
 
-If one wants to send a stream into nothingness send it to `/dev/null`.  
+The stream of nothingness `/dev/null` can be used to read or send infinitely from or to it.  
 
 To stop processes use `kill [<pid>|%<jobid>]`.  
-`killall` kills by name.  
+`killall` kills processes by mathing their name.  

@@ -6,3 +6,4 @@
     + status which is one of "Sleeping", "Running", "Zombie", ...
     + command
 
+other programs are `top` `htop`.  

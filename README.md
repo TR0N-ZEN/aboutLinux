@@ -3,6 +3,8 @@
 ## Highest rated sources
 
 + <https://tldp.org/guides.html>
++ <https://www.redhat.com/sysadmin/>
+  + <https://www.redhat.com/sysadmin/linux-environment-variables>
 
 ---
 
@@ -14,15 +16,17 @@
     + <https://www.tecmint.com/35-practical-examples-of-linux-find-command/>
     + <https://www.ibm.com/docs/de/aix/7.2?topic=files-finding-find-command>
     + <https://riptutorial.com/bash/example/1845/executing-commands-against-a-found-file>
-  + `netstat -tulpenao`
-  + `iptables -t <tableName> --list <chainName>`
-  + <https://forum.ubuntuusers.de/topic/programm-benoetigt-libstdc-so/>
+  + strange errors
+    + <https://forum.ubuntuusers.de/topic/programm-benoetigt-libstdc-so/>
   + bash
     + <https://linuxize.com/post/bash-functions/>
-+ networking
-  + <https://www.thegeekstuff.com/2011/01/iptables-fundamentals/>
-  + <https://www.netfilter.org/documentation/HOWTO/de/packet-filtering-HOWTO-7.html>
-  + <https://www.tutorialspoint.com/data_communication_computer_network/transmission_control_protocol.htm>
+  + networking
+    + <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/consistent-network-interface-device-naming_configuring-and-managing-networking#doc-wrapper>
+    + `netstat -tulpenao`
+    + `iptables -t <tableName> --list <chainName>`
+    + <https://www.thegeekstuff.com/2011/01/iptables-fundamentals/>
+    + <https://www.netfilter.org/documentation/HOWTO/de/packet-filtering-HOWTO-7.html>
+    + <https://www.tutorialspoint.com/data_communication_computer_network/transmission_control_protocol.htm>
 
 ```bash
 ll -tm1 | head -n 6 | xargs rm -r --

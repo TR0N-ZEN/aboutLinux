@@ -1,7 +1,8 @@
 
 Running programs are called processes.  
-Processes can create child processes and communicate with them.  
-Each process next to other things, has a:
+Processes can create child processes.
+Processes can communicate other processes.  
+Each process (next to other things) has a:
   + pid (process id)
   + ppid (parent process id; except for the _init process_)
   + list of things each pointing to child processes, each thin also contains a jobid, numbering the child processes starting from 1
@@ -11,14 +12,18 @@ Each process next to other things, has a:
     + input
     + output
     + error
-    + ...
-
 
 A process gets its id from its parent process.  
 
-Processes can be:
-+ deamons (are background processes, meaning a user would not directly interact with it instead programs do; on request with `ps -f` in column with heading _TTY_ a question mark should be)
-+ well other processes, I know no further classification.  
+Processes can be considered as a
++ deamon (background processes, meaning a user would not directly interact with it instead programs do; on request with `ps -f` in column with heading _TTY_ a question mark should be present)
++ interactively used programs
+well other processes, I know no further classification but there are some terms I still wonder about:
++ service
++ microservice
++ app
++ applet
++ job
 
 
 When interacting with a computer as a human so called *shells* also known as *command line interfaces* are used.  
