@@ -31,4 +31,4 @@ ENTRYPOINT [ "cat" ]
 # CMD cat -n /tmp/README.md
 
 
-CMD ["-n", "/tmp/README.md"
+CMD ["-n", "/tmp/README.md"]

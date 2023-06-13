@@ -34,6 +34,8 @@ Execute `sed -ne '/CMD/p'` on files inside the folder or any subfolder of '/tmp/
 which is equivalent to: `find "CMD" /tmp/ -name '*\.dockerfile'`.  
 <br>
 
-Find files containering 'docker-compose.', segment the name on each dot and print the fourth and fifth segement separatated by a dot.  
+Find files containing the text 'docker-compose.',  
+segment the name on each dot and  
+print the fourth and fifth segement separatated by a dot.  
 `find . -name '*docker-compose.*' | awk 'BEGIN {FS="."} {system("mkdir "$4"."$5)}'`
 
