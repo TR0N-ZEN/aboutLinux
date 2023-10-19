@@ -112,5 +112,97 @@
 | kill      | kill processes by process id                                         |
 | apk       | package manager for linux distribution alpine                        |
 | make      | -                                                                    |
+| bmon      | monitor network interface traffic statistics                         |
 | -         | -                                                                    |
-| -         | -                                                                    |
+
+
+## take a look at:
+aria2c
+bat
+bottom
+broot
+btop++
+ccat
+choose
+colordiff
+colorex
+crush
+delta
+diff-so-fancy
+dig
+dstat
+duf
+dust
+dutree
+exa
+falsisign
+fuck
+fx
+fzf
+glow
+googler
+goto
+gping
+gron
+gulasch
+hdparm
+hexyl
+HTTP Prompt
+HTTPie
+hub
+hyperfine
+icdiff
+ioping
+iproute2
+jc
+jq
+kubtail
+locate
+logrotate
+lolcat
+lsd
+lynis
+map
+mcfly
+mkef2fs
+mtr
+musikcube
+ncdu
+nethogs
+nmon
+no more secrets
+Oh My Posh
+oh-heck
+oping
+procs
+progress
+pv
+q
+quota
+reptyr
+ripgrep
+saidar
+sd
+skim
+socket statistics
+syslogd
+talk
+tcpdump
+testdisk
+tig
+tracepath
+ttyd
+Ultimate Plumber
+usbkill
+viu
+whereis
+write
+WTF
+XMLStarlet
+xonsh
+xsv
+xterm
+xxh
+z
+zsh
+
