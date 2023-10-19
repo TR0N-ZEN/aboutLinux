@@ -3,6 +3,7 @@
 ## Highest rated sources
 
 + <https://tldp.org/guides.html>
++ <https://www.gnu.org/software/bash/manual/bash.html>
 + <https://www.redhat.com/sysadmin/>
   + <https://www.redhat.com/sysadmin/linux-environment-variables>
 
@@ -31,12 +32,16 @@
 ```bash
 ll -tm1 | head -n 6 | xargs rm -r --
 
-docker restart `docker container ls --all | grep "24 minutes" | cut -d' ' -f1`
+docker restart `docker container ls --all \
+| grep "24 minutes" \
+| cut -d' ' -f1`
 
 GIT_SSH_COMMAND="ssh -i /mnt/c/Users/T-Reichert/.ssh/personal_github -o ConnectTimeout=10" git clone git@github.com:TR0N-ZEN/windows-scripting.git
 ```
 
-```bash
+To test on windows with docker use
+```powershell
+docker stop u2; docker run -dit --rm --name u2 -v .\Desktop\aboutLinux\:/opt/aboutLinux/ debian sleep inf; docker exec -it u2 bash
 ```
 
 ```bash
