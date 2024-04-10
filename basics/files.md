@@ -1,18 +1,21 @@
-In Unix-like operating systems it is common that everything  
-is organised in files and directories (e.g. storage devices, input devices).
+In unix like operating systems it is common that many things 
+are organised in/as files and directories (e.g. storage devices, input devices, regular files).
 
-If queried with `ls` the first symbol in each row represents a fileproperty, which can be:  
+If queried with `ls` the first symbol in each row represents a file property, which can be:  
+
 | Symbol | meaning                                                                            |
 | ------ | ---------------------------------------------------------------------------------- |
 | \-     |                                                                                    |
-| b      |                                                                                    |
+| b      | block device                                                                       |
 | c      | character special file. Raw input/output device file such as a physical hard drive |
 | d      | directory                                                                          |
 | l      | symbolic link file                                                                 |
 | p      | named pipe                                                                         |
 | s      | socket                                                                             |
 
+
 ## folder structure
+
 / (the base folder also known as _root_)  
 ├── bin -> usr/bin  
 ├── boot  
@@ -34,6 +37,3 @@ If queried with `ls` the first symbol in each row represents a fileproperty, whi
 ├── tmp  
 ├── usr  
 └── var  
-
-18 directories, 2 files
-

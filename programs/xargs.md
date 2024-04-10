@@ -15,5 +15,6 @@ and `-0` of `xargs` makes it read its input as a null seperated list.
 ---
 
 examples:  
-`sudo docker container ls --all --format '{{ json . }}' | jq '.ID' | xargs sudo docker container rm`  
-`sudo docker image ls --all --format '{{json . }}' | jq '.ID' | xargs sudo docker image rm`
+
++ `sudo docker container ls --all --format '{{ json . }}' | jq '.ID' | xargs sudo docker container rm`
++ `sudo docker image ls --all --format '{{json . }}' | jq '.ID' | xargs sudo docker image rm`

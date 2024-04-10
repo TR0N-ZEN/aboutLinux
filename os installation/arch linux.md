@@ -3,6 +3,7 @@ resource: https://wiki.archlinux.org/title/installation_guide
 ---
 
 change keyboard layout
+
 ```BASH
 loadkeys de-latin1
 ```
