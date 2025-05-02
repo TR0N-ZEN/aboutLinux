@@ -67,8 +67,6 @@ The keys:
 + <kbd>&</kbd> - terminate current window
 + <kbd>x</kbd> - close current pane
 + <kbd>+</kbd> - rename current window (doesn't seem to work)
-+ <kbd></kbd> -
-+ <kbd></kbd> -
 
 Start a new window:
 
@@ -79,5 +77,5 @@ tmux new-window -t <sessionIndex> -n <windowName>
 send commands to a window
 
 ```bash
-tmux send-keys -t <sessionName>:<windowName> "<ommand>" ENTER
+tmux send-keys -t <sessionName>:<windowName> "<command>" ENTER
 ```
