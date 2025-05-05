@@ -58,13 +58,13 @@ EOF
   fi;
   echo "setup_apt.sh"
   sudo apt-get update -y && sudo apt-get upgrade -y
-  while getopts ":dc" option; do
+  while getopts ":cds" option; do
     case $option in
-      d)
-        tools_desktop
-        exit;;
       c)
         tools_cli
+        exit;;
+      d)
+        tools_desktop
         exit;;
       s)
         tools_server
@@ -76,11 +76,6 @@ EOF
   done
 }
 
-# packages via snap
-# sudo snap install --classic code # or code-insiders
-# sudo snap install vlc
-# sudo snap install spotify
-# sudo snap install discord --classic
 
 # $* is the arguments supplied to the called script
 main $*
