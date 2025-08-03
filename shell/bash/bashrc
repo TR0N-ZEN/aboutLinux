@@ -1,0 +1,8 @@
+export HISTFILESIZE=2000000
+export HISTSIZE=2000000
+
+alias ll='ls -alh'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gc='git diff --cached'
