@@ -2,7 +2,6 @@
 
 sources:
 
-+ <https://dev.to/iggredible/what-does-2-1-mean-290>
 + <https://www.howtogeek.com/439199/15-special-characters-you-need-to-know-for-bash/>
 + <http://www.compciv.org/topics/bash/variables-and-substitution/>
 + <https://tldp.org/LDP/abs/html/opprecedence.html>
