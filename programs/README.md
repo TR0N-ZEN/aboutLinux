@@ -1,7 +1,84 @@
 # README
 
-To find commands and functions use the shell builtin command `compgen`
-like so for example `compgen -c system | sort | uniq`.
+When you are in a bash shell and want to list all commands,
+  type "compgen -c" into your bash shell and press enter.
+  But if you would like to see only the commands
+  which start with the letters "wh" then type "compgen -c wh"
+  into your shell and press enter, so
+  your shell then should look similar to this:
+  ┌────────────────────────┐
+  │$ compgen -c wh         │
+  │which                   │
+  │while                   │
+  │whatis                  │
+  │whois                   │
+  │whiptail                │
+  │whereis                 │
+  │who                     │
+  │whoami                  │
+  └────────────────────────┘
+If you want to know what a command with the name "x" does,
+  you can use the command "whatis" from above by
+  typing "whatis x" into your shell and press enter.
+  So for example if you type "whatis man" and press enter
+  it looks like so:
+  ┌────────────────────────────────────────────────────────────────────┐
+  │ $ whatis man                                                       │
+  │ man (1)              - an interface to the system reference manuals│
+  └────────────────────────────────────────────────────────────────────┘
+
+The command "man" can be used to read manuals of programs.
+  In order to understand better how we can use the command "man",
+  we can read about that in its own manual page which we
+  can open with the command "man man", so:
+  ┌─────────┐
+  │$ man man│
+  └─────────┘
+  actually replaces the visible screen of the shell with a
+  so called alternative screen which then it is first lines show
+  something like this:
+  ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+  │MAN(1)                              Manual pager utils                              MAN(1)│
+  │                                                                                          │
+  │NAME                                                                                      │
+  │       man - an interface to the system reference manuals                                 │
+  │                                                                                          │
+  │SYNOPSIS                                                                                  │
+  │       man [man options] [[section] page ...] ...                                         │
+  │       man -k [apropos options] regexp ...                                                │
+  │       man -K [man options] [section] term ...                                            │
+  │       man -f [whatis options] page ...                                                   │
+  │       man -l [man options] file ...                                                      │
+  │       man -w|-W [man options] page ...                                                   │
+  │                                                                                          │
+  │DESCRIPTION                                                                               │
+  │       man  is the system's manual pager.  Each page argument given to man is normally the│
+  │       name of a program, utility or function.  The manual page associated  with  each  of│
+  │       these  arguments  is then found and displayed.  A section, if provided, will direct│
+  │       man to look only in that section of the manual.  The default action is to search in│
+  │       all of the available sections following a pre-defined order (see DEFAULTS), and  to│
+  │       show only the first page found, even if page exists in several sections.           │
+  └──────────────────────────────────────────────────────────────────────────────────────────┘
+  From here on you should read the sections
+    NAME, SYNOPSIS, DESCRIPTION, EXAMPLES and OVERVIEW
+  to get you started.
+  Not understanding everything is completely normal and expected.
+  Just try out commands you think would work and see what happens,
+  If it does not work read some parts you are not sure about again or
+  read further and try again.
+
+This way you can basically discorver any program that has a documentation
+  page.
+  Also bash for example has one and since bash is your
+  primary way to interact with the computer here it would
+  help if you read and try out stuff from the manpage of
+  bash, so the command "man bash" and read.
+
+To find commands and functions use the shell builtin command "compgen"
+like so for example:
+  ┌─────────────────────────────────┐
+  │$ compgen -c system | sort | uniq│
+  └─────────────────────────────────┘
 
 ## hardware
 
@@ -167,8 +244,8 @@ like so for example `compgen -c system | sort | uniq`.
 | ip             | display information about internet protocol                                                                           |
 | nmcli          | networkmanager in red hat linux distributions                                                                         |
 | iptables       | network package filter                                                                                                |
-|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                |                                                                                                                       |
+|                |                                                                                                                       |
 
 ---
 
